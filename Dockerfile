@@ -20,5 +20,6 @@ RUN set -eux; \
 COPY bootstrap.sh /opt/runa-h3/bootstrap.sh
 RUN chmod 755 /opt/runa-h3/bootstrap.sh
 
-# Keep the base image's ENTRYPOINT; only change its command.
-CMD ["/opt/runa-h3/bootstrap.sh"]
+# Override the base image ENTRYPOINT so model downloads run BEFORE /start.sh.
+# bootstrap.sh invokes /start.sh once downloads complete.
+ENTRYPOINT ["/opt/runa-h3/bootstrap.sh"]
