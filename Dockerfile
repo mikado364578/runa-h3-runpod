@@ -2,6 +2,11 @@
 FROM runpod/comfyui:1.4.0-comfyuiv0.35.0-cuda12.8
 
 USER root
+
+# Runpod JupyterLab without a manually configured password.
+# SECURITY: port 8888 grants unauthenticated access to a root terminal.
+ENV JUPYTER_DISABLE_AUTH=true
+
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
 # The official image copies /opt/comfyui-baked to /workspace on first boot.
