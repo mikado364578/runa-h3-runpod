@@ -7,7 +7,7 @@ Automated MiniMax H3 setup for RUNA lip-sync music videos.
 - Extends Runpod ComfyUI 0.35.0 / CUDA 12.8.
 - Bakes five custom-node packages into the image (no GPU time spent cloning them).
 - Downloads seven model files (about 37 GB) to the temporary Pod disk before starting ComfyUI.
-- Invokes Runpod's original `/start.sh` to retain FileBrowser, SSH, and authenticated JupyterLab.
+- Invokes Runpod's original `/start.sh` to retain FileBrowser, SSH, and JupyterLab (without a password; port 8888 is sensitive).
 - Does **not** include any RUNA portraits, audio, LoRAs trained on people, workflow JSON, or credentials.
 
 ## Build
@@ -20,13 +20,14 @@ Pushing a commit to `main` starts the GitHub Actions image build, which publishe
 
 ## Runpod template (after a successful image build)
 
-- Container image: `ghcr.io/mikado364578/runa-h3-runpod:cuda12.8`
+- Container image: `docker.io/mikado364578/runa-h3-runpod:cuda12.8`
 - Container start command: **leave blank** (the image defines its own default)
 - Container disk: 100 GB for the first test (reassess usage)
 - Persistent storage: 0 GB
 - HTTP ports: `8188`, `8080`, `8888`
 - TCP port: `22`
-- Set `JUPYTER_PASSWORD` and `FILEBROWSER_PASSWORD` via Runpod Secrets; do not disable authentication.
+- JupyterLab starts without a password (`JUPYTER_DISABLE_AUTH=true` baked into the image). **Warning:** anyone with the Pod’s public port 8888 URL can operate a root terminal and read your files. Keep the URL private and avoid sharing it. To restore Jupyter authentication, set `JUPYTER_DISABLE_AUTH=false` and `JUPYTER_PASSWORD` in the Runpod template.
+- Set `FILEBROWSER_PASSWORD` via Runpod Secrets (do not use its public default).
 - GPU: at least 80 GB VRAM for the tested H3 workflow.
 
 Do **not** reset, stop or restart a temporary Pod before saving outputs: the container disk is erased.
