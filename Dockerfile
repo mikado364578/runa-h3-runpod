@@ -17,6 +17,12 @@ RUN set -eux; \
     git clone -q https://github.com/nicolab28/ComfyUI-ClipProj.git "$base/comfyui-clipproj"; \
     python3 -m pip install --no-cache-dir cryptography opencv-python imageio-ffmpeg
 
+# Store the sanitized workflow in ComfyUI's saved-workflow directory.
+# It contains no RUNA prompts or personal input filenames.
+COPY RUNA_H3.workflow.json.gz.b64 /opt/runa-h3/workflow.json.gz.b64
+RUN mkdir -p /opt/comfyui-baked/user/default/workflows \
+    && base64 -d /opt/runa-h3/workflow.json.gz.b64 | gzip -dc > /opt/comfyui-baked/user/default/workflows/RUNA_H3.json
+
 COPY bootstrap.sh /opt/runa-h3/bootstrap.sh
 RUN chmod 755 /opt/runa-h3/bootstrap.sh
 
