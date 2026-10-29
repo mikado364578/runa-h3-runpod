@@ -7,7 +7,7 @@ Automated MiniMax H3 setup for RUNA lip-sync music videos.
 - Extends Runpod ComfyUI 0.35.0 / CUDA 12.8.
 - Bakes five custom-node packages into the image (no GPU time spent cloning them).
 - Downloads seven model files (about 37 GB) to the temporary Pod disk before starting ComfyUI.
-- Invokes Runpod's original `/start.sh` to retain FileBrowser, SSH, and JupyterLab when enabled by the Runpod template.
+- Invokes Runpod's original `/start.sh` to retain FileBrowser, SSH, and JupyterLab. If no `JUPYTER_PASSWORD` is supplied, creates a secure per-Pod token and passes it to `/start.sh` automatically.
 - Includes a sanitized RUNA_H3.json workflow (no personal prompts or input files); does **not** include RUNA portraits, audio, personal LoRAs, or credentials.
 
 ## Build
@@ -26,7 +26,7 @@ Pushing a commit to `main` starts the GitHub Actions image build, which publishe
 - Persistent storage: 0 GB
 - HTTP ports: `8188`, `8080`, `8888`
 - TCP port: `22`
-- Enable **Start Jupyter notebook** in the Runpod Pod/template interface when available. The image does not disable Jupyter authentication. Runpod's `/start.sh` controls startup; if logs say `JUPYTER_PASSWORD is not set; skipping JupyterLab`, verify the template's Jupyter option and environment. The checkbox alone may not suffice for this specific base image: test port 8888 before relying on it. Do not disable authentication as a workaround; Jupyter can execute terminal commands and read your files.
+- JupyterLab is enabled automatically by `bootstrap.sh` without a manually configured password: the script generates a random authentication token saved at `/workspace/.runa-jupyter-token` (permissions `600`) and supplies it as `JUPYTER_PASSWORD` to the base image's `/start.sh`. To retrieve the token from the Runpod Web Terminal: `cat /workspace/.runa-jupyter-token`. Enter that token in JupyterLab at port `8888` when asked. **Never publish the token or the Jupyter URL.** If `JUPYTER_PASSWORD` is explicitly supplied, it takes precedence; the token file won't be generated. Keep `JUPYTER_DISABLE_AUTH` unset.
 - Set `FILEBROWSER_PASSWORD` via Runpod Secrets (do not use its public default).
 - GPU: at least 80 GB VRAM for the tested H3 workflow.
 
