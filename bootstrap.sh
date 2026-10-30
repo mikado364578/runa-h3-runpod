@@ -9,6 +9,9 @@ EARLY_JUPYTER_PID=""
 
 on_error() {
   echo "[RUNA H3] ERROR at line $1: startup incomplete." >&2
+  if [[ -n "${EARLY_JUPYTER_PID:-}" ]]; then
+    kill "$EARLY_JUPYTER_PID" 2>/dev/null || true
+  fi
 }
 trap 'on_error "$LINENO"' ERR
 
