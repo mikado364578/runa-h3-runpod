@@ -5,57 +5,86 @@ COMFY_DIR=/workspace/runpod-slim/ComfyUI
 MODEL_DIR="$COMFY_DIR/models"
 BAKED_DIR=/opt/comfyui-baked
 START_SCRIPT=/start.sh
+EARLY_JUPYTER_PID=""
 
 on_error() {
-  echo "[RUNA H3] Setup FAILED at line $1. Original ComfyUI has not been started." >&2
-  echo "[RUNA H3] Inspect the download error; do not assume the Pod is ready." >&2
+  echo "[RUNA H3] ERROR at line $1: startup incomplete." >&2
 }
 trap 'on_error "$LINENO"' ERR
 
-echo "[RUNA H3] Preparing official ComfyUI install..."
+echo "============================================================"
+echo "  RUNA H3  |  MiniMax Music Video  |  CUDA 12.8"
+echo "============================================================"
 mkdir -p /workspace/runpod-slim
 if [[ ! -d "$COMFY_DIR" ]]; then
   cp -a "$BAKED_DIR" "$COMFY_DIR"
 fi
-
 mkdir -p "$MODEL_DIR"/{diffusion_models,text_encoders,vae,loras,clip_projections}
-command -v hf >/dev/null || { echo '[RUNA H3] Missing hf CLI' >&2; exit 1; }
+command -v hf >/dev/null || { echo "[RUNA H3] ERROR: hf CLI missing." >&2; exit 1; }
+command -v jupyter >/dev/null || { echo "[RUNA H3] ERROR: JupyterLab missing." >&2; exit 1; }
 
-fetch_nested() {
-  local repo="$1" path="$2"
-  echo "[RUNA H3] $repo / $path"
-  hf download "$repo" "$path" --local-dir "$MODEL_DIR"
-}
-fetch_flat() {
-  local repo="$1" filename="$2" subdir="$3"
-  echo "[RUNA H3] $repo / $filename"
-  hf download "$repo" "$filename" --local-dir "$MODEL_DIR/$subdir"
-}
-
-fetch_nested Comfy-Org/MiniMax-H3 diffusion_models/minimax_h3_fl2va_pruned_int8_convrot.safetensors
-fetch_nested Comfy-Org/MiniMax-H3 vae/minimax_h3_video_vae_fp16.safetensors
-fetch_nested Comfy-Org/MiniMax-H3 vae/minimax_h3_audio_vae_fp32.safetensors
-fetch_nested Comfy-Org/Qwen3-VL text_encoders/qwen3vl_4b_fp8_scaled.safetensors
-fetch_flat ethanfel/MiniMax-H3-Pruned-Ref2VA-Delta-LoRAs-Experimental minimax_h3_pruned_bf16__apply_to_fl2va__toward_ref2va__rank512.safetensors loras
-fetch_flat lightx2v/Minimax-h3-Turbo minimax_h3_fl2v_turbo_8step_v1.0_comfyui_bf16.safetensors loras
-fetch_flat NicoLab28/ClipProj-MiniMax-H3 mmh3-4b-ClipProj-v3.1.safetensors clip_projections
-
-# /start.sh starts JupyterLab only when JUPYTER_PASSWORD is set.
-# Create a per-Pod cryptographically secure token without logging its value.
-# Respect an explicit JUPYTER_PASSWORD supplied through Runpod.
+# This official image starts Jupyter only with JUPYTER_PASSWORD set.
+# Prefer a Runpod-configured token; otherwise generate one securely, without logging it.
 if [[ -z "${JUPYTER_PASSWORD:-}" && "${JUPYTER_DISABLE_AUTH:-false}" != "true" ]]; then
   TOKEN_FILE=/workspace/.runa-jupyter-token
   umask 077
   if [[ ! -s "$TOKEN_FILE" ]]; then
-    python3 -c 'import secrets, pathlib; pathlib.Path("/workspace/.runa-jupyter-token").write_text(secrets.token_urlsafe(32) + "\n")'
+    python3 -c 'import secrets,pathlib; pathlib.Path("/workspace/.runa-jupyter-token").write_text(secrets.token_urlsafe(32)+"\n")'
   fi
   chmod 600 "$TOKEN_FILE"
   export JUPYTER_PASSWORD
   JUPYTER_PASSWORD="$(tr -d '\r\n' < "$TOKEN_FILE")"
-  [[ -n "$JUPYTER_PASSWORD" ]] || { echo '[RUNA H3] Jupyter token generation failed' >&2; exit 1; }
-  echo "[RUNA H3] JupyterLab authentication enabled; retrieve its token with: cat /workspace/.runa-jupyter-token"
+  [[ -n "$JUPYTER_PASSWORD" ]] || { echo "[RUNA H3] ERROR: Jupyter token generation failed." >&2; exit 1; }
+  echo "[RUNA H3] Jupyter: secure token generated (retrieve via cat /workspace/.runa-jupyter-token)."
+else
+  echo "[RUNA H3] Jupyter: using configured Runpod authentication."
 fi
 
-echo "[RUNA H3] All seven model files are ready."
-echo "[RUNA H3] Starting official Runpod services and ComfyUI..."
+# Early Jupyter access while model downloads run. Stop it before /start.sh
+# to avoid competing listeners on port 8888. /start.sh restarts it normally.
+# Jupyter output goes into /jupyter-early.log, never to public startup logs.
+echo "[RUNA H3] Starting early JupyterLab on port 8888..."
+if [[ "${JUPYTER_DISABLE_AUTH:-false}" == "true" ]]; then
+  JUPYTER_TOKEN=""
+else
+  JUPYTER_TOKEN="$JUPYTER_PASSWORD"
+fi
+export JUPYTER_TOKEN
+nohup jupyter lab --allow-root --no-browser --port=8888 --ip=0.0.0.0 \
+  --FileContentsManager.delete_to_trash=False \
+  --FileContentsManager.preferred_dir=/workspace \
+  --ServerApp.root_dir=/workspace \
+  --IdentityProvider.token="$JUPYTER_TOKEN" \
+  --ServerApp.allow_origin='*' > /jupyter-early.log 2>&1 &
+EARLY_JUPYTER_PID=$!
+echo "[RUNA H3] Early Jupyter process launched (PID $EARLY_JUPYTER_PID)."
+
+echo "[RUNA H3] Installing/checking seven model files..."
+python3 /opt/runa-h3/model_downloads.py
+
+# Do not leave the early instance running when official /start.sh starts.
+echo "[RUNA H3] Models ready. Handing services to official Runpod startup..."
+if [[ -n "$EARLY_JUPYTER_PID" ]] && kill -0 "$EARLY_JUPYTER_PID" 2>/dev/null; then
+  kill "$EARLY_JUPYTER_PID" 2>/dev/null || true
+  for attempt in {1..20}; do
+    if ! kill -0 "$EARLY_JUPYTER_PID" 2>/dev/null; then break; fi
+    sleep 0.25
+  done
+  wait "$EARLY_JUPYTER_PID" 2>/dev/null || true
+fi
+# Confirm the early service really released the port before /start.sh.
+if python3 -c 'import socket; s=socket.socket(); code=s.connect_ex(("127.0.0.1",8888)); s.close(); raise SystemExit(0 if code else 1)'; then
+  echo "[RUNA H3] Jupyter port cleared for official restart."
+else
+  echo "[RUNA H3] WARNING: Jupyter port may still be in use; official startup will log any conflict."
+fi
+
+echo "============================================================"
+echo "  RUNA H3 — model download summary"
+echo "  Models      7/7 verified"
+echo "  Workflow    $COMFY_DIR/user/default/workflows/RUNA_H3.json"
+echo "  Jupyter     port 8888 (authentication enabled unless explicitly disabled)"
+echo "  ComfyUI     port 8188 (starting now)"
+echo "  FileBrowser port 8080 (starting now)"
+echo "============================================================"
 exec "$START_SCRIPT"
