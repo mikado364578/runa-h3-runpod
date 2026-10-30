@@ -24,7 +24,7 @@ COPY RUNA_H3.workflow.json.gz.b64 /opt/runa-h3/workflow.json.gz.b64
 RUN mkdir -p /opt/comfyui-baked/user/default/workflows \
     && base64 -d /opt/runa-h3/workflow.json.gz.b64 | gzip -dc > /opt/comfyui-baked/user/default/workflows/RUNA_H3.json
 
-COPY bootstrap.sh /opt/runa-h3/bootstrap.sh
+COPY bootstrap.sh model_downloads.py /opt/runa-h3/
 RUN chmod 755 /opt/runa-h3/bootstrap.sh
 
 # Override the base image ENTRYPOINT so model downloads run BEFORE /start.sh.
