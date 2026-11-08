@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Download the seven pinned RUNA H3 model files concurrently and report concise progress."""
+"""Download the pinned RUNA H3 and official music-video models concurrently."""
 import concurrent.futures
 import os
 from pathlib import Path
@@ -16,6 +16,8 @@ JOBS = [
     ("Ref2VA LoRA", "ethanfel/MiniMax-H3-Pruned-Ref2VA-Delta-LoRAs-Experimental", "minimax_h3_pruned_bf16__apply_to_fl2va__toward_ref2va__rank512.safetensors", ROOT / "loras"),
     ("H3 turbo LoRA", "lightx2v/Minimax-h3-Turbo", "minimax_h3_fl2v_turbo_8step_v1.0_comfyui_bf16.safetensors", ROOT / "loras"),
     ("ClipProj", "NicoLab28/ClipProj-MiniMax-H3", "mmh3-4b-ClipProj-v3.1.safetensors", ROOT / "clip_projections"),
+    ("Official Qwen3-VL 32B", "Comfy-Org/MiniMax-H3", "text_encoders/qwen3vl_32b_minimax_h3_int8_convrot.safetensors", ROOT),
+    ("Official H3 video VAE INT8", "Kijai/MiniMax-H3-experimental", "minimax_h3_video_vae_int8_convrot.safetensors", ROOT / "vae"),
 ]
 MAX_WORKERS = 3
 ATTEMPTS = 3
@@ -34,9 +36,7 @@ def download(job):
         if process.returncode == 0 and expected.is_file() and expected.stat().st_size > 0:
             return name, expected.stat().st_size
         print(f"[RUNA H3] WARNING {name}: attempt {attempt}/{ATTEMPTS} failed (exit={process.returncode})", flush=True)
-        lines = process.stdout.strip().splitlines()
-        for line in lines[-5:]:
-            print(f"[RUNA H3]   {line[:250]}", flush=True)
+        # Avoid printing download tool output: URLs or credentials may be included.
         if attempt < ATTEMPTS:
             time.sleep(min(10 * attempt, 30))
     raise RuntimeError(f"{name}: failed after {ATTEMPTS} attempts")
