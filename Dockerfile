@@ -24,6 +24,10 @@ COPY RUNA_H3.workflow.json.gz.b64 /opt/runa-h3/workflow.json.gz.b64
 RUN mkdir -p /opt/comfyui-baked/user/default/workflows \
     && base64 -d /opt/runa-h3/workflow.json.gz.b64 | gzip -dc > /opt/comfyui-baked/user/default/workflows/RUNA_H3.json
 
+# Add both updated ComfyUI workflows without replacing the original RUNA_H3.json.
+COPY Runa_H3_New.json /opt/comfyui-baked/user/default/workflows/Runa_H3_New.json
+COPY ["NEW - Music Video.json", "/opt/comfyui-baked/user/default/workflows/NEW - Music Video.json"]
+
 COPY bootstrap.sh model_downloads.py /opt/runa-h3/
 RUN chmod 755 /opt/runa-h3/bootstrap.sh
 
