@@ -39,3 +39,12 @@ Do **not** reset, stop or restart a temporary Pod before saving outputs: the con
 The extension versions and model filenames are based on the working source Pod. This container has **not yet been validated** with a full RUNA workflow. Before production use, confirm ComfyUI's startup logs have no failed node imports, upload your own reference images and audio, and run a short one-clip test. The custom extensions are third-party code and should be reviewed before running.
 
 The initial GitHub Actions build incurs no Runpod GPU charges, but GitHub Actions and container-registry policies/quotas still apply.
+
+## CUDA 13 experimental variant (`test-cuda13` branch)
+
+- Docker image: `ghcr.io/mikado364578/runa-h3-runpod:cuda13-test-v2`.
+- This image installs only `RUNA_H3_Cuda13.json` into the new Pod's ComfyUI saved-workflows directory.
+- The validated output node uses 39 context frames and 0 extra overlap frames to preserve the two-clip continuity and audio alignment.
+- Previous workflow source files remain in GitHub for historical recovery, but are not copied into this image.
+- SageAttention is not installed or enabled in this Docker image; tests on a running Pod may differ.
+- As before, user-specific images and audio need to be provided separately to run the workflow.
