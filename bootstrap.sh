@@ -16,8 +16,11 @@ on_error() {
 trap 'on_error "$LINENO"' ERR
 
 echo "============================================================"
-echo "  RUNA H3  |  MiniMax Music Video  |  CUDA 12.8"
+echo "  RUNA H3  |  MiniMax Music Video  |  CUDA 13 EXPERIMENT"
 echo "============================================================"
+# Fail early rather than spending several minutes downloading models with cu128.
+python3 -c "import torch; print('[RUNA H3] PyTorch:', torch.__version__, 'CUDA:', torch.version.cuda, flush=True); assert torch.version.cuda is not None and torch.version.cuda.startswith('13.'), 'Expected CUDA 13.x PyTorch; refusing to start experimental pod'"
+
 mkdir -p /workspace/runpod-slim
 if [[ ! -d "$COMFY_DIR" ]]; then
   cp -a "$BAKED_DIR" "$COMFY_DIR"
