@@ -10,6 +10,7 @@ import time
 ROOT = Path("/workspace/runpod-slim/ComfyUI/models")
 JOBS = [
     ("H3 diffusion", "Comfy-Org/MiniMax-H3", "diffusion_models/minimax_h3_fl2va_pruned_int8_convrot.safetensors", ROOT),
+    ("Official H3 REF2VA diffusion", "Comfy-Org/MiniMax-H3", "diffusion_models/minimax_h3_ref2va_pruned_int8_convrot.safetensors", ROOT),
     ("H3 video VAE", "Comfy-Org/MiniMax-H3", "vae/minimax_h3_video_vae_fp16.safetensors", ROOT),
     ("H3 audio VAE", "Comfy-Org/MiniMax-H3", "vae/minimax_h3_audio_vae_fp32.safetensors", ROOT),
     ("Qwen3-VL encoder", "Comfy-Org/Qwen3-VL", "text_encoders/qwen3vl_4b_fp8_scaled.safetensors", ROOT),
@@ -65,7 +66,7 @@ def main():
     if failures:
         print("[RUNA H3] ERROR: downloads incomplete; ComfyUI will NOT be marked ready.", flush=True)
         return 1
-    print(f"[RUNA H3] All 7 models verified in {int(time.monotonic()-started)}s.", flush=True)
+    print(f"[RUNA H3] All {len(JOBS)} models verified in {int(time.monotonic()-started)}s.", flush=True)
     return 0
 
 
