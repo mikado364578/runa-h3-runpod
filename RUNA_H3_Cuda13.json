@@ -997,7 +997,8 @@
           "input_ue_unconnectable": {}
         }
       }
-    },    {
+    },
+    {
       "id": 701,
       "type": "MiniMaxH3SongMaskedAVContext",
       "pos": [
@@ -1996,7 +1997,8 @@
         {
           "name": "noise",
           "type": "NOISE",
-          "link": 354        },
+          "link": 354
+        },
         {
           "name": "guider",
           "type": "GUIDER",
@@ -2995,7 +2997,8 @@
       "order": 6,
       "mode": 4,
       "inputs": [],
-      "outputs": [        {
+      "outputs": [
+        {
           "name": "NOISE",
           "type": "NOISE",
           "links": [
@@ -3994,7 +3997,8 @@
         "Node name for S&R": "ComfyMathExpression",
         "ue_properties": {
           "widget_ue_connectable": {},
-          "version": "7.7",          "input_ue_unconnectable": {}
+          "version": "7.7",
+          "input_ue_unconnectable": {}
         }
       },
       "widgets_values": [
@@ -4993,7 +4997,8 @@
         {
           "name": "LATENT",
           "type": "LATENT",
-          "links": [            1287
+          "links": [
+            1287
           ]
         }
       ],
@@ -5992,7 +5997,8 @@
         "",
         960,
         544,
-        362,        "match"
+        362,
+        "match"
       ],
       "widgets_values_named": {
         "prompt": "",
@@ -6991,7 +6997,8 @@
         24,
         "disabled"
       ],
-      "widgets_values_named": {        "clip_start_seconds": 0,
+      "widgets_values_named": {
+        "clip_start_seconds": 0,
         "context_length": 39,
         "source_fps": 24,
         "crop": "disabled"
@@ -7990,7 +7997,8 @@
         0,
         39,
         24,
-        "disabled"      ],
+        "disabled"
+      ],
       "widgets_values_named": {
         "clip_start_seconds": 0,
         "context_length": 39,
@@ -8989,7 +8997,8 @@
         },
         {
           "name": "vae",
-          "shape": 7,          "type": "VAE",
+          "shape": 7,
+          "type": "VAE",
           "link": null
         }
       ],
@@ -9988,7 +9997,8 @@
         "aux_id": "jtydhr88/ComfyUI-Workflow-Encrypt",
         "ue_properties": {
           "widget_ue_connectable": {},
-          "version": "7.7",          "input_ue_unconnectable": {}
+          "version": "7.7",
+          "input_ue_unconnectable": {}
         }
       },
       "widgets_values": {
@@ -10987,7 +10997,8 @@
           "input_ue_unconnectable": {}
         }
       },
-      "widgets_values": {        "frame_rate": 24,
+      "widgets_values": {
+        "frame_rate": 24,
         "loop_count": 0,
         "filename_prefix": "h3_preview/music_clip_17",
         "format": "video/h264-mp4",
@@ -11986,7 +11997,8 @@
         "ver": "0.33.0",
         "Node name for S&R": "ComfyMathExpression",
         "ue_properties": {
-          "widget_ue_connectable": {},          "version": "7.7",
+          "widget_ue_connectable": {},
+          "version": "7.7",
           "input_ue_unconnectable": {}
         }
       },
@@ -12985,7 +12997,8 @@
           "widget_ue_connectable": {},
           "version": "7.7",
           "input_ue_unconnectable": {}
-        }      },
+        }
+      },
       "widgets_values": [
         "minimax_h3_audio_vae_fp32.safetensors"
       ],
@@ -13530,11 +13543,11 @@
         }
       },
       "widgets_values": [
-        "Portrait tressé sur fond transparent-2.png",
+        "",
         "image"
       ],
       "widgets_values_named": {
-        "image": "Portrait tressé sur fond transparent-2.png",
+        "image": "",
         "upload": "image"
       }
     },
@@ -13598,11 +13611,11 @@
         }
       },
       "widgets_values": [
-        "3e8eb468b63a0146e3d69e07db28cacd.jpg",
+        "",
         "image"
       ],
       "widgets_values_named": {
-        "image": "3e8eb468b63a0146e3d69e07db28cacd.jpg",
+        "image": "",
         "upload": "image"
       }
     },
@@ -13666,11 +13679,11 @@
         }
       },
       "widgets_values": [
-        "Concert de rue de Runa dans la nuit.png",
+        "",
         "image"
       ],
       "widgets_values_named": {
-        "image": "Concert de rue de Runa dans la nuit.png",
+        "image": "",
         "upload": "image"
       }
     },
@@ -13718,7 +13731,7 @@
           ]
         }
       ],
-      "title": "MASTER SONG — Talk Me Out of You (4).mp3",
+      "title": "MASTER SONG — SELECT AUDIO FILE",
       "properties": {
         "cnr_id": "comfy-core",
         "ver": "0.30.0",
@@ -13731,11 +13744,11 @@
         "h3_music_role": "master_song"
       },
       "widgets_values": [
-        "Untitled.wav",
+        "",
         null
       ],
       "widgets_values_named": {
-        "audio": "Untitled.wav",
+        "audio": "",
         "upload": null
       },
       "color": "#232",
@@ -13889,14 +13902,14 @@
         }
       },
       "widgets_values": [
-        "subject_definitions:\n  <Subject 1> is Runa, the lead singer, whose facial identity and braided hairstyle come from <Picture 1> and whose body proportions, black knotted top, blue jeans, jewelry and white sneakers come from <Picture 2>. <Picture 3> defines the narrow urban alley, the tiny stage, the lighting, the drummer, the bassist and the crowd.\n\nsummary:\n  Continue the same live performance seamlessly from the protected video context. Do not reset the scene, pose, lighting, camera direction or performance energy. The camera keeps pushing smoothly toward Runa and ends on a tight hips-up shot while she sings with growing intensity.\n\nretention_analysis:\n  <Subject 1> (appears throughout [Shot 1]): fully_preserved — retain facial identity, braids, outfit, body proportions, jewelry and live-performance energy.\n  Background elements: fully_preserved — keep exactly two musicians (drummer and bassist), the same narrow alley stage, the same crowd with smartphones, and the same warm-and-purple concert lighting. As the camera moves closer, the musicians and crowd remain visible at the edges and in the softened background.\n\ndetailed_description:\n  Photorealistic live concert footage, vertical framing, front-row audience point of view, narrow alley performance.\n\n  [Shot 1]\n  Continue directly from the protected video context with no cut, no reset, no jump in pose, no jump in lighting, and no sudden camera change. The existing motion continues naturally.\n\n  The camera is already moving forward toward <Subject 1> (S1) and keeps a smooth, steady, clearly noticeable push-in for the whole shot. The framing starts wider and gradually tightens. By the final two seconds, it settles into a stable tight shot framed from her hips to above her head, with her face large, clear and readable.\n\n  S1 continues singing <d>[LANGUE] PAROLES 6,4s-14,4s.</d> with clearly readable mouth shapes, jaw articulation and believable live lip sync. Her expression grows stronger and more intense through the shot.\n\n  Her body stays musically alive: subtle shoulder pulse, small upper-body groove, and a soft graceful hip sway already present in continuity with the performance. The movement must feel elegant, natural, feminine and controlled — never exaggerated, never awkward, never dance-like.\n\n  Her gaze briefly shifts toward one side of the crowd, then returns to the front. One free hand makes a small, graceful gesture around chest height, then relaxes naturally. On the final stronger phrase, she leans slightly toward the microphone with controlled intensity, then straightens naturally. The microphone remains on its stand for the whole shot.\n\n  In the background, the drummer maintains a steady four-on-the-floor pulse with realistic stick movement. The bassist continues a driving groove with subtle realistic hand movement and a small head nod. The crowd in the foreground sways slightly, with some spectators filming on smartphones.\n\n  Keep the scene immersive, stable and continuous, with Runa always the clear focal point.\n\noverall_soundscape:\n  Live alley atmosphere, crowd presence, close-miked band energy.\n\nnon_diegetic_music:\n  Master-song section; keep the visible performance synchronized with the supplied timeline.",
+        "",
         960,
         544,
         362,
         "match"
       ],
       "widgets_values_named": {
-        "prompt": "subject_definitions:\n  <Subject 1> is Runa, the lead singer, whose facial identity and braided hairstyle come from <Picture 1> and whose body proportions, black knotted top, blue jeans, jewelry and white sneakers come from <Picture 2>. <Picture 3> defines the narrow urban alley, the tiny stage, the lighting, the drummer, the bassist and the crowd.\n\nsummary:\n  Continue the same live performance seamlessly from the protected video context. Do not reset the scene, pose, lighting, camera direction or performance energy. The camera keeps pushing smoothly toward Runa and ends on a tight hips-up shot while she sings with growing intensity.\n\nretention_analysis:\n  <Subject 1> (appears throughout [Shot 1]): fully_preserved — retain facial identity, braids, outfit, body proportions, jewelry and live-performance energy.\n  Background elements: fully_preserved — keep exactly two musicians (drummer and bassist), the same narrow alley stage, the same crowd with smartphones, and the same warm-and-purple concert lighting. As the camera moves closer, the musicians and crowd remain visible at the edges and in the softened background.\n\ndetailed_description:\n  Photorealistic live concert footage, vertical framing, front-row audience point of view, narrow alley performance.\n\n  [Shot 1]\n  Continue directly from the protected video context with no cut, no reset, no jump in pose, no jump in lighting, and no sudden camera change. The existing motion continues naturally.\n\n  The camera is already moving forward toward <Subject 1> (S1) and keeps a smooth, steady, clearly noticeable push-in for the whole shot. The framing starts wider and gradually tightens. By the final two seconds, it settles into a stable tight shot framed from her hips to above her head, with her face large, clear and readable.\n\n  S1 continues singing <d>[LANGUE] PAROLES 6,4s-14,4s.</d> with clearly readable mouth shapes, jaw articulation and believable live lip sync. Her expression grows stronger and more intense through the shot.\n\n  Her body stays musically alive: subtle shoulder pulse, small upper-body groove, and a soft graceful hip sway already present in continuity with the performance. The movement must feel elegant, natural, feminine and controlled — never exaggerated, never awkward, never dance-like.\n\n  Her gaze briefly shifts toward one side of the crowd, then returns to the front. One free hand makes a small, graceful gesture around chest height, then relaxes naturally. On the final stronger phrase, she leans slightly toward the microphone with controlled intensity, then straightens naturally. The microphone remains on its stand for the whole shot.\n\n  In the background, the drummer maintains a steady four-on-the-floor pulse with realistic stick movement. The bassist continues a driving groove with subtle realistic hand movement and a small head nod. The crowd in the foreground sways slightly, with some spectators filming on smartphones.\n\n  Keep the scene immersive, stable and continuous, with Runa always the clear focal point.\n\noverall_soundscape:\n  Live alley atmosphere, crowd presence, close-miked band energy.\n\nnon_diegetic_music:\n  Master-song section; keep the visible performance synchronized with the supplied timeline.",
+        "prompt": "",
         "width": 960,
         "height": 544,
         "length": 362,
@@ -13984,7 +13997,8 @@
             "name": "width"
           },
           "link": 57
-        },        {
+        },
+        {
           "name": "height",
           "type": "INT",
           "widget": {
@@ -14052,14 +14066,14 @@
         }
       },
       "widgets_values": [
-        "subject_definitions:\n<Subject 1> is Runa, the lead singer, whose facial identity and braided hairstyle come from <Picture 1> and whose body proportions, black knotted top, blue jeans, jewelry and white sneakers come from <Picture 2>. <Picture 3> defines the narrow urban alley, the tiny stage, the lighting, the drummer, the bassist and the crowd.\n\nsummary:\nContinue the existing live performance without resetting anything. Runa keeps singing in a tight framing, then the camera slowly pulls back to reveal the band behind her as the song builds.\n\nretention_analysis:\n<Subject 1> (appears throughout [Shot 1]): fully_preserved - retain facial identity, braids, outfit, body proportions and jewelry. Exactly two musicians (drummer and bassist), the stage, the crowd with smartphones and the lighting are preserved; as the camera pulls back, the drummer and the bassist reappear clearly in their original positions.\n\ndetailed_description:\nPhotorealistic live concert footage in a narrow alley, vertical framing, audience point of view from the front row.\n[Shot 1] The incoming pose, motion, camera trajectory and lighting continue uninterrupted from the protected video context. The shot begins as a tight framing from <Subject 1> (S1)'s hips to above her head, her face large and readable. For the first two seconds the framing stays stable. Then the camera makes a smooth, slow, continuous dolly-back, with no cut and no jump, widening gradually to a medium shot in which the drummer on the left and the bassist on the right become clearly visible on both sides of her. S1 sings with clearly readable mouth and jaw articulation: <d>[LANGUE] PAROLES 14,4s-20,75s.</d> Her weight shifts slowly from one leg to the other, her shoulders follow the beat, and her head tilts gently with the melody. Her gaze moves to the crowd on her left, then returns to the front. One free hand rises to chest height in a small, graceful gesture, then lowers. The microphone stays on its stand. The drummer keeps a steady four-on-the-floor pulse with precise stick movements. The bassist plays a driving groove with realistic finger movements and a subtle head nod. The crowd sways slightly, some people filming with smartphones.\n\noverall_soundscape:\nLive alley atmosphere, crowd, close-miked band.\n\nnon_diegetic_music:\nMaster-song section; keep the visible performance synchronized with the supplied timeline.",
+        "",
         960,
         544,
         362,
         "match"
       ],
       "widgets_values_named": {
-        "prompt": "subject_definitions:\n<Subject 1> is Runa, the lead singer, whose facial identity and braided hairstyle come from <Picture 1> and whose body proportions, black knotted top, blue jeans, jewelry and white sneakers come from <Picture 2>. <Picture 3> defines the narrow urban alley, the tiny stage, the lighting, the drummer, the bassist and the crowd.\n\nsummary:\nContinue the existing live performance without resetting anything. Runa keeps singing in a tight framing, then the camera slowly pulls back to reveal the band behind her as the song builds.\n\nretention_analysis:\n<Subject 1> (appears throughout [Shot 1]): fully_preserved - retain facial identity, braids, outfit, body proportions and jewelry. Exactly two musicians (drummer and bassist), the stage, the crowd with smartphones and the lighting are preserved; as the camera pulls back, the drummer and the bassist reappear clearly in their original positions.\n\ndetailed_description:\nPhotorealistic live concert footage in a narrow alley, vertical framing, audience point of view from the front row.\n[Shot 1] The incoming pose, motion, camera trajectory and lighting continue uninterrupted from the protected video context. The shot begins as a tight framing from <Subject 1> (S1)'s hips to above her head, her face large and readable. For the first two seconds the framing stays stable. Then the camera makes a smooth, slow, continuous dolly-back, with no cut and no jump, widening gradually to a medium shot in which the drummer on the left and the bassist on the right become clearly visible on both sides of her. S1 sings with clearly readable mouth and jaw articulation: <d>[LANGUE] PAROLES 14,4s-20,75s.</d> Her weight shifts slowly from one leg to the other, her shoulders follow the beat, and her head tilts gently with the melody. Her gaze moves to the crowd on her left, then returns to the front. One free hand rises to chest height in a small, graceful gesture, then lowers. The microphone stays on its stand. The drummer keeps a steady four-on-the-floor pulse with precise stick movements. The bassist plays a driving groove with realistic finger movements and a subtle head nod. The crowd sways slightly, some people filming with smartphones.\n\noverall_soundscape:\nLive alley atmosphere, crowd, close-miked band.\n\nnon_diegetic_music:\nMaster-song section; keep the visible performance synchronized with the supplied timeline.",
+        "prompt": "",
         "width": 960,
         "height": 544,
         "length": 362,
@@ -14128,11 +14142,11 @@
         }
       },
       "widgets_values": [
-        "Concert de Runa au milieu de la foule.png",
+        "",
         "image"
       ],
       "widgets_values_named": {
-        "image": "Concert de Runa au milieu de la foule.png",
+        "image": "",
         "upload": "image"
       }
     },
@@ -14284,14 +14298,14 @@
         }
       },
       "widgets_values": [
-        "subject_definitions:\n<Subject 1> is Runa, the lead singer, whose facial identity and braided hairstyle come from <Picture 1> and whose body proportions, black knotted top, blue jeans, jewelry and white sneakers come from <Picture 2>.\n<Subject 2> is the dense crowd of alley concert-goers in <Picture 3>: young adults of mixed genders, in dark casual clothes, beanies, leather jackets, some with dreadlocks and tattoos, packed shoulder to shoulder in front of the stage, many holding smartphones.\n<Subject 3> is the narrow urban alley in <Picture 3>: brick walls covered in graffiti and posters, hanging string lights, warm street lamps, subtle purple stage lights, the tiny stage with the RUNA drum kit and rug.\n<Subject 4> is the two musicians in <Picture 3>: the tattooed drummer with a man bun on the left and the bearded bassist in a black beanie and dark jacket on the right.\n\nsummary:\n[reference generation] The target video continues the existing live performance without resetting anything. The build-up peaks and the chorus drops: <Subject 2> erupts in a joyful, disorderly party while <Subject 1> sings with explosive energy.\n\nretention_analysis:\n<Subject 1> (appears in [Shot 1], [Shot 2], [Shot 3]): fully_preserved - her identity, braids, outfit and body proportions are retained; the microphone stays on its stand.\n<Subject 2> (appears in [Shot 1], [Shot 2], [Shot 3]): fully_preserved - the same dense crowd with the same clothing and look.\n<Subject 3> (appears in [Shot 1], [Shot 2], [Shot 3]): fully_preserved - same alley, same lighting.\n<Subject 4> (appears in [Shot 1], [Shot 3]): fully_preserved - exactly two musicians, same positions.\n\ndetailed_description:\nThe target video is realistic live-action concert footage in a raw handheld audience point-of-view style, warm amber string lights against subtle purple stage light, vertical framing.\n[Shot 1] The incoming pose, motion, camera trajectory and lighting continue uninterrupted from the protected video context. The camera holds a stable medium shot of <Subject 1> (S1) as the build-up reaches its peak: the drummer's rhythm tightens, <Subject 2> starts to bounce and raise phones, and S1 sings with growing intensity, mouth and jaw clearly articulating <d>[LANGUE] PAROLES</d>.\n[Shot 2] At 00:02.000, as the drop detonates, the shot cuts to a lower handheld angle from inside the front rows, with strong shake: <Subject 2> erupts, jumping on every beat, clapping over their heads, fists pumping, arms waving and bent, hair and dreadlocks swinging, friends hugging and shouting the chorus back with open mouths, phones held high above the heads. Each person moves in their own way and never holds both arms straight out in front. Behind them S1 belts the chorus <d>[LANGUE] PAROLES</d>, free hand raised, shoulders and head moving with the groove, her feet staying on the stage.\n[Shot 3] At 00:04.500, the shot cuts back to a medium shot of <Subject 1> (S1) at the stage, camera pushing in slowly and stable, her face large and readable, singing <d>[LANGUE] PAROLES</d> with explosive energy while <Subject 2> keeps jumping and clapping in the foreground and <Subject 4> plays a powerful four-on-the-floor pulse with a crash accent and a driving bass groove. She never touches the microphone. The shot ends at peak energy with the crowd still bouncing.\n\noverall_soundscape:\nLive alley atmosphere, the crowd cheering, clapping and shouting the chorus, close-miked band.\n\nnon_diegetic_music:\nMaster-song section containing the end of the build-up and the chorus drop; keep the visible performance synchronized with the supplied timeline.",
+        "",
         960,
         544,
         362,
         "match"
       ],
       "widgets_values_named": {
-        "prompt": "subject_definitions:\n<Subject 1> is Runa, the lead singer, whose facial identity and braided hairstyle come from <Picture 1> and whose body proportions, black knotted top, blue jeans, jewelry and white sneakers come from <Picture 2>.\n<Subject 2> is the dense crowd of alley concert-goers in <Picture 3>: young adults of mixed genders, in dark casual clothes, beanies, leather jackets, some with dreadlocks and tattoos, packed shoulder to shoulder in front of the stage, many holding smartphones.\n<Subject 3> is the narrow urban alley in <Picture 3>: brick walls covered in graffiti and posters, hanging string lights, warm street lamps, subtle purple stage lights, the tiny stage with the RUNA drum kit and rug.\n<Subject 4> is the two musicians in <Picture 3>: the tattooed drummer with a man bun on the left and the bearded bassist in a black beanie and dark jacket on the right.\n\nsummary:\n[reference generation] The target video continues the existing live performance without resetting anything. The build-up peaks and the chorus drops: <Subject 2> erupts in a joyful, disorderly party while <Subject 1> sings with explosive energy.\n\nretention_analysis:\n<Subject 1> (appears in [Shot 1], [Shot 2], [Shot 3]): fully_preserved - her identity, braids, outfit and body proportions are retained; the microphone stays on its stand.\n<Subject 2> (appears in [Shot 1], [Shot 2], [Shot 3]): fully_preserved - the same dense crowd with the same clothing and look.\n<Subject 3> (appears in [Shot 1], [Shot 2], [Shot 3]): fully_preserved - same alley, same lighting.\n<Subject 4> (appears in [Shot 1], [Shot 3]): fully_preserved - exactly two musicians, same positions.\n\ndetailed_description:\nThe target video is realistic live-action concert footage in a raw handheld audience point-of-view style, warm amber string lights against subtle purple stage light, vertical framing.\n[Shot 1] The incoming pose, motion, camera trajectory and lighting continue uninterrupted from the protected video context. The camera holds a stable medium shot of <Subject 1> (S1) as the build-up reaches its peak: the drummer's rhythm tightens, <Subject 2> starts to bounce and raise phones, and S1 sings with growing intensity, mouth and jaw clearly articulating <d>[LANGUE] PAROLES</d>.\n[Shot 2] At 00:02.000, as the drop detonates, the shot cuts to a lower handheld angle from inside the front rows, with strong shake: <Subject 2> erupts, jumping on every beat, clapping over their heads, fists pumping, arms waving and bent, hair and dreadlocks swinging, friends hugging and shouting the chorus back with open mouths, phones held high above the heads. Each person moves in their own way and never holds both arms straight out in front. Behind them S1 belts the chorus <d>[LANGUE] PAROLES</d>, free hand raised, shoulders and head moving with the groove, her feet staying on the stage.\n[Shot 3] At 00:04.500, the shot cuts back to a medium shot of <Subject 1> (S1) at the stage, camera pushing in slowly and stable, her face large and readable, singing <d>[LANGUE] PAROLES</d> with explosive energy while <Subject 2> keeps jumping and clapping in the foreground and <Subject 4> plays a powerful four-on-the-floor pulse with a crash accent and a driving bass groove. She never touches the microphone. The shot ends at peak energy with the crowd still bouncing.\n\noverall_soundscape:\nLive alley atmosphere, the crowd cheering, clapping and shouting the chorus, close-miked band.\n\nnon_diegetic_music:\nMaster-song section containing the end of the build-up and the chorus drop; keep the visible performance synchronized with the supplied timeline.",
+        "prompt": "",
         "width": 960,
         "height": 544,
         "length": 362,
@@ -14448,14 +14462,14 @@
         }
       },
       "widgets_values": [
-        "subject_definitions:\n<Subject 1> is Runa, the lead singer, whose facial identity and braided hairstyle come from <Picture 1> and whose body proportions, black knotted top, blue jeans, jewelry and white sneakers come from <Picture 2>.\n<Subject 2> is the dense crowd of alley concert-goers in <Picture 3>: young adults of mixed genders, in dark casual clothes, beanies, leather jackets, some with dreadlocks and tattoos, packed shoulder to shoulder in front of the stage, many holding smartphones.\n<Subject 3> is the narrow urban alley in <Picture 3>: brick walls covered in graffiti and posters, hanging string lights, warm street lamps, subtle purple stage lights, the tiny stage with the RUNA drum kit and rug.\n<Subject 4> is the two musicians in <Picture 3>: the tattooed drummer with a man bun on the left and the bearded bassist in a black beanie and dark jacket on the right.\n\nsummary:\n[reference generation] The target video continues the existing live performance without resetting anything. The chorus keeps its energy: <Subject 2> keeps cheering and singing along while <Subject 1> sings with confident, powerful intensity and connects with the audience.\n\nretention_analysis:\n<Subject 1> (appears in [Shot 1], [Shot 2], [Shot 3]): fully_preserved - her identity, braids, outfit and body proportions are retained; the microphone stays on its stand.\n<Subject 2> (appears in [Shot 1], [Shot 2], [Shot 3]): fully_preserved - the same dense crowd with the same clothing and look.\n<Subject 3> (appears in [Shot 1], [Shot 2], [Shot 3]): fully_preserved - same alley, same lighting.\n<Subject 4> (appears in [Shot 1], [Shot 3]): fully_preserved - exactly two musicians, same positions.\n\ndetailed_description:\nThe target video is realistic live-action concert footage in a raw handheld audience point-of-view style, warm amber string lights against subtle purple stage light, vertical framing.\n[Shot 1] The incoming pose, motion, camera trajectory and lighting continue uninterrupted from the protected video context. The camera holds a stable medium shot of <Subject 1> (S1) as the chorus carries on: <Subject 2> keeps cheering, clapping and singing along in the foreground, phones still held high, and S1 sings with clearly readable mouth and jaw articulation <d>[LANGUE] PAROLES</d>, free hand rising and falling with the melody, shoulders moving with the groove.\n[Shot 2] At 00:03.000, the shot cuts to a close handheld shot from the front rows, framed from S1's waist to above her head, slight shake. S1 locks eyes with the audience, a confident smile at the end of the phrase, singing <d>[LANGUE] PAROLES</d>, her head moving with the melody, one hand reaching out gently toward the crowd. In the soft foreground, <Subject 2> sways, cheers and sings along, each person reacting in their own way. Her feet stay on the stage and she never touches the microphone.\n[Shot 3] At 00:05.500, the shot cuts to a wider handheld shot of the stage in which <Subject 4> plays steadily: the drummer with a strong, precise four-on-the-floor pulse and a short fill, the bassist with a driving groove and a head nod on the beat. S1 stands between them singing <d>[LANGUE] PAROLES</d>, the crowd still cheering in the foreground. The camera is stable with a slow push-in toward S1, and the shot ends with her face large and readable.\n\noverall_soundscape:\nLive alley atmosphere, the crowd cheering and singing along, close-miked band.\n\nnon_diegetic_music:\nMaster-song section of the chorus; keep the visible performance synchronized with the supplied timeline.",
+        "",
         960,
         544,
         362,
         "match"
       ],
       "widgets_values_named": {
-        "prompt": "subject_definitions:\n<Subject 1> is Runa, the lead singer, whose facial identity and braided hairstyle come from <Picture 1> and whose body proportions, black knotted top, blue jeans, jewelry and white sneakers come from <Picture 2>.\n<Subject 2> is the dense crowd of alley concert-goers in <Picture 3>: young adults of mixed genders, in dark casual clothes, beanies, leather jackets, some with dreadlocks and tattoos, packed shoulder to shoulder in front of the stage, many holding smartphones.\n<Subject 3> is the narrow urban alley in <Picture 3>: brick walls covered in graffiti and posters, hanging string lights, warm street lamps, subtle purple stage lights, the tiny stage with the RUNA drum kit and rug.\n<Subject 4> is the two musicians in <Picture 3>: the tattooed drummer with a man bun on the left and the bearded bassist in a black beanie and dark jacket on the right.\n\nsummary:\n[reference generation] The target video continues the existing live performance without resetting anything. The chorus keeps its energy: <Subject 2> keeps cheering and singing along while <Subject 1> sings with confident, powerful intensity and connects with the audience.\n\nretention_analysis:\n<Subject 1> (appears in [Shot 1], [Shot 2], [Shot 3]): fully_preserved - her identity, braids, outfit and body proportions are retained; the microphone stays on its stand.\n<Subject 2> (appears in [Shot 1], [Shot 2], [Shot 3]): fully_preserved - the same dense crowd with the same clothing and look.\n<Subject 3> (appears in [Shot 1], [Shot 2], [Shot 3]): fully_preserved - same alley, same lighting.\n<Subject 4> (appears in [Shot 1], [Shot 3]): fully_preserved - exactly two musicians, same positions.\n\ndetailed_description:\nThe target video is realistic live-action concert footage in a raw handheld audience point-of-view style, warm amber string lights against subtle purple stage light, vertical framing.\n[Shot 1] The incoming pose, motion, camera trajectory and lighting continue uninterrupted from the protected video context. The camera holds a stable medium shot of <Subject 1> (S1) as the chorus carries on: <Subject 2> keeps cheering, clapping and singing along in the foreground, phones still held high, and S1 sings with clearly readable mouth and jaw articulation <d>[LANGUE] PAROLES</d>, free hand rising and falling with the melody, shoulders moving with the groove.\n[Shot 2] At 00:03.000, the shot cuts to a close handheld shot from the front rows, framed from S1's waist to above her head, slight shake. S1 locks eyes with the audience, a confident smile at the end of the phrase, singing <d>[LANGUE] PAROLES</d>, her head moving with the melody, one hand reaching out gently toward the crowd. In the soft foreground, <Subject 2> sways, cheers and sings along, each person reacting in their own way. Her feet stay on the stage and she never touches the microphone.\n[Shot 3] At 00:05.500, the shot cuts to a wider handheld shot of the stage in which <Subject 4> plays steadily: the drummer with a strong, precise four-on-the-floor pulse and a short fill, the bassist with a driving groove and a head nod on the beat. S1 stands between them singing <d>[LANGUE] PAROLES</d>, the crowd still cheering in the foreground. The camera is stable with a slow push-in toward S1, and the shot ends with her face large and readable.\n\noverall_soundscape:\nLive alley atmosphere, the crowd cheering and singing along, close-miked band.\n\nnon_diegetic_music:\nMaster-song section of the chorus; keep the visible performance synchronized with the supplied timeline.",
+        "prompt": "",
         "width": 960,
         "height": 544,
         "length": 362,
@@ -14604,14 +14618,14 @@
         }
       },
       "widgets_values": [
-        "subject_definitions:\n<Subject 1> is Runa, the lead singer, whose facial identity and braided hairstyle come from <Picture 1> and whose body proportions, black knotted top, blue jeans, jewelry and white sneakers come from <Picture 2>.\n<Subject 2> is the dense crowd of alley concert-goers in <Picture 3>: young adults of mixed genders, in dark casual clothes, beanies, leather jackets, some with dreadlocks and tattoos, packed shoulder to shoulder in front of the stage, many holding smartphones.\n<Subject 3> is the narrow urban alley in <Picture 3>: brick walls covered in graffiti and posters, hanging string lights, warm street lamps, subtle purple stage lights, the tiny stage with the RUNA drum kit and rug.\n<Subject 4> is the two musicians in <Picture 3>: the tattooed drummer with a man bun on the left and the bearded bassist in a black beanie and dark jacket on the right.\n\nsummary:\n[reference generation] The target video continues the existing live performance without resetting anything and brings it to its ending: <Subject 1> sings the final phrase of the song with full power, holds the last note, and ends on a stable close-up of her face while the crowd cheers.\n\nretention_analysis:\n<Subject 1> (appears in [Shot 1], [Shot 2]): fully_preserved - her identity, braids, outfit and body proportions are retained; the microphone stays on its stand.\n<Subject 2> (appears in [Shot 1], [Shot 2]): fully_preserved - the same dense crowd with the same clothing and look.\n<Subject 3> (appears in [Shot 1], [Shot 2]): fully_preserved - same alley, same lighting.\n<Subject 4> (appears in [Shot 1]): fully_preserved - exactly two musicians, same positions.\n\ndetailed_description:\nThe target video is realistic live-action concert footage in a raw handheld audience point-of-view style, warm amber string lights against subtle purple stage light, vertical framing.\n[Shot 1] The incoming pose, motion, camera trajectory and lighting continue uninterrupted from the protected video context. The camera holds a stable medium shot of <Subject 1> (S1) as the last chorus lines are sung: S1 sings with clearly readable mouth and jaw articulation <d>[LANGUE] PAROLES</d>, one free hand rising with the melody, while <Subject 2> keeps cheering and singing along and <Subject 4> plays a driving four-on-the-floor pulse and bass groove.\n[Shot 2] At 00:03.000, the shot cuts to a stable medium close-up of S1 at the stage, camera pushing in very slowly, her face large and readable. She sings the final phrase <d>[LANGUE] PAROLES</d> with full power, holds the last note, then ends with a confident smile and a look straight at the audience while the crowd cheers and applauds behind her. The shot stays stable and ends on her face. She never touches the microphone.\n\noverall_soundscape:\nLive alley atmosphere, the crowd cheering and applauding at the end, close-miked band.\n\nnon_diegetic_music:\nLast section of the master song, ending with the final phrase; keep the visible performance synchronized with the supplied timeline.",
+        "",
         960,
         544,
         141,
         "match"
       ],
       "widgets_values_named": {
-        "prompt": "subject_definitions:\n<Subject 1> is Runa, the lead singer, whose facial identity and braided hairstyle come from <Picture 1> and whose body proportions, black knotted top, blue jeans, jewelry and white sneakers come from <Picture 2>.\n<Subject 2> is the dense crowd of alley concert-goers in <Picture 3>: young adults of mixed genders, in dark casual clothes, beanies, leather jackets, some with dreadlocks and tattoos, packed shoulder to shoulder in front of the stage, many holding smartphones.\n<Subject 3> is the narrow urban alley in <Picture 3>: brick walls covered in graffiti and posters, hanging string lights, warm street lamps, subtle purple stage lights, the tiny stage with the RUNA drum kit and rug.\n<Subject 4> is the two musicians in <Picture 3>: the tattooed drummer with a man bun on the left and the bearded bassist in a black beanie and dark jacket on the right.\n\nsummary:\n[reference generation] The target video continues the existing live performance without resetting anything and brings it to its ending: <Subject 1> sings the final phrase of the song with full power, holds the last note, and ends on a stable close-up of her face while the crowd cheers.\n\nretention_analysis:\n<Subject 1> (appears in [Shot 1], [Shot 2]): fully_preserved - her identity, braids, outfit and body proportions are retained; the microphone stays on its stand.\n<Subject 2> (appears in [Shot 1], [Shot 2]): fully_preserved - the same dense crowd with the same clothing and look.\n<Subject 3> (appears in [Shot 1], [Shot 2]): fully_preserved - same alley, same lighting.\n<Subject 4> (appears in [Shot 1]): fully_preserved - exactly two musicians, same positions.\n\ndetailed_description:\nThe target video is realistic live-action concert footage in a raw handheld audience point-of-view style, warm amber string lights against subtle purple stage light, vertical framing.\n[Shot 1] The incoming pose, motion, camera trajectory and lighting continue uninterrupted from the protected video context. The camera holds a stable medium shot of <Subject 1> (S1) as the last chorus lines are sung: S1 sings with clearly readable mouth and jaw articulation <d>[LANGUE] PAROLES</d>, one free hand rising with the melody, while <Subject 2> keeps cheering and singing along and <Subject 4> plays a driving four-on-the-floor pulse and bass groove.\n[Shot 2] At 00:03.000, the shot cuts to a stable medium close-up of S1 at the stage, camera pushing in very slowly, her face large and readable. She sings the final phrase <d>[LANGUE] PAROLES</d> with full power, holds the last note, then ends with a confident smile and a look straight at the audience while the crowd cheers and applauds behind her. The shot stays stable and ends on her face. She never touches the microphone.\n\noverall_soundscape:\nLive alley atmosphere, the crowd cheering and applauding at the end, close-miked band.\n\nnon_diegetic_music:\nLast section of the master song, ending with the final phrase; keep the visible performance synchronized with the supplied timeline.",
+        "prompt": "",
         "width": 960,
         "height": 544,
         "length": 141,
@@ -14887,14 +14901,14 @@
         }
       },
       "widgets_values": [
-        "subject_definitions:\n  <Subject 1> is Runa, the lead singer, whose exact facial identity and braided hairstyle come from <Picture 1>, and whose body proportions, black knotted top, blue jeans, jewelry, and white sneakers come from <Picture 2>.\n  <Subject 2> is the dense crowd of alley concert-goers from <Picture 3>, packed closely in front of the stage, with several people holding smartphones and filming.\n  <Subject 3> is the narrow urban alley from <Picture 3>: brick walls covered in graffiti and posters, hanging string lights, warm street lamps, subtle purple stage lighting, and the tiny stage with the RUNA drum kit and rug.\n  <Subject 4> is the two musicians from <Picture 3>: the tattooed drummer with a man bun on the left, and the bearded bassist in a black beanie and dark jacket on the right.\n\nsummary:\n  [reference generation] Create a realistic live-performance video in a narrow urban alley. Runa is already performing at the microphone stand from the very first frame, with a calm, confident, feminine stage presence. She sings while moving naturally and elegantly to the groove. Her pose must not copy <Picture 3> directly.\n\nretention_analysis:\n  <Subject 1> (appears throughout [Shot 1]): fully_preserved — preserve her identity, braided hairstyle, outfit, body proportions, jewelry, and overall look.\n  <Subject 2> (appears throughout [Shot 1]): fully_preserved — same crowd density, same alley-concert energy, mostly steady audience behavior.\n  <Subject 3> (appears throughout [Shot 1]): fully_preserved — same alley, same lighting mood, same tiny-stage atmosphere.\n  <Subject 4> (appears throughout [Shot 1]): fully_preserved — exactly two musicians, same positions, same visual identity.\n\ndetailed_description:\n  The target video is realistic live-action concert footage, vertical framing, front-row audience point of view, with warm amber string lights mixed with subtle purple stage lighting.\n\n  [Shot 1]\n  <Subject 1> (S1) is already singing at the microphone stand from the first frame. She stands with both feet flat on the ground, about shoulder-width apart, posture grounded and balanced, with no crossed legs. Her hips are already moving gently and gracefully with the rhythm from the start — a soft, elegant side-to-side sway, feminine and natural, never exaggerated, never awkward, never comedic. Her torso follows the groove with subtle fluidity, and her shoulders pulse lightly with the beat.\n\n  One hand rests lightly on the microphone stand around chest height for stability and stage presence, while the other arm remains relaxed and expressive. As she sings <d>[LANGUE] PAROLES 0s-8s.</d>, her mouth and jaw articulation are clearly readable and synchronized. Her gaze stays engaged with the audience, and her facial expression is confident, focused, and intense, with the charisma of a real live frontwoman.\n\n  During the shot, her free hand occasionally lifts in a slow, natural expressive gesture near chest or waist height, then settles back down smoothly. The movement should feel musical and emotionally connected to the vocal line. She should never look stiff, but also never overperform or dance too much. Her hip motion remains graceful and continuous throughout the shot, giving a subtle sensual groove without becoming flashy.\n\n  The microphone remains on its stand for the whole shot.\n\n  <Subject 4> performs realistically behind her: the drummer plays a steady four-on-the-floor pulse with precise stick movement and consistent groove, while the bassist plays a driving line with believable finger motion and a subtle head nod in time with the music.\n\n  <Subject 2> remains mostly steady and immersed in the performance, with a few spectators filming on smartphones, small natural body movements, and occasional gentle crowd sway.\n\n  The camera holds a stable medium shot from the audience perspective and performs a very slow, smooth push-in toward Runa over the full shot. The framing should feel intimate, controlled, and immersive, with Runa remaining the clear focal point.\n\noverall_soundscape:\n  Live alley atmosphere, crowd presence, and close-miked band energy.\n\nnon_diegetic_music:\n  Use the supplied master song. Keep the visible live performance synchronized with the supplied musical timeline.",
+        "",
         960,
         544,
         362,
         "match"
       ],
       "widgets_values_named": {
-        "prompt": "subject_definitions:\n  <Subject 1> is Runa, the lead singer, whose exact facial identity and braided hairstyle come from <Picture 1>, and whose body proportions, black knotted top, blue jeans, jewelry, and white sneakers come from <Picture 2>.\n  <Subject 2> is the dense crowd of alley concert-goers from <Picture 3>, packed closely in front of the stage, with several people holding smartphones and filming.\n  <Subject 3> is the narrow urban alley from <Picture 3>: brick walls covered in graffiti and posters, hanging string lights, warm street lamps, subtle purple stage lighting, and the tiny stage with the RUNA drum kit and rug.\n  <Subject 4> is the two musicians from <Picture 3>: the tattooed drummer with a man bun on the left, and the bearded bassist in a black beanie and dark jacket on the right.\n\nsummary:\n  [reference generation] Create a realistic live-performance video in a narrow urban alley. Runa is already performing at the microphone stand from the very first frame, with a calm, confident, feminine stage presence. She sings while moving naturally and elegantly to the groove. Her pose must not copy <Picture 3> directly.\n\nretention_analysis:\n  <Subject 1> (appears throughout [Shot 1]): fully_preserved — preserve her identity, braided hairstyle, outfit, body proportions, jewelry, and overall look.\n  <Subject 2> (appears throughout [Shot 1]): fully_preserved — same crowd density, same alley-concert energy, mostly steady audience behavior.\n  <Subject 3> (appears throughout [Shot 1]): fully_preserved — same alley, same lighting mood, same tiny-stage atmosphere.\n  <Subject 4> (appears throughout [Shot 1]): fully_preserved — exactly two musicians, same positions, same visual identity.\n\ndetailed_description:\n  The target video is realistic live-action concert footage, vertical framing, front-row audience point of view, with warm amber string lights mixed with subtle purple stage lighting.\n\n  [Shot 1]\n  <Subject 1> (S1) is already singing at the microphone stand from the first frame. She stands with both feet flat on the ground, about shoulder-width apart, posture grounded and balanced, with no crossed legs. Her hips are already moving gently and gracefully with the rhythm from the start — a soft, elegant side-to-side sway, feminine and natural, never exaggerated, never awkward, never comedic. Her torso follows the groove with subtle fluidity, and her shoulders pulse lightly with the beat.\n\n  One hand rests lightly on the microphone stand around chest height for stability and stage presence, while the other arm remains relaxed and expressive. As she sings <d>[LANGUE] PAROLES 0s-8s.</d>, her mouth and jaw articulation are clearly readable and synchronized. Her gaze stays engaged with the audience, and her facial expression is confident, focused, and intense, with the charisma of a real live frontwoman.\n\n  During the shot, her free hand occasionally lifts in a slow, natural expressive gesture near chest or waist height, then settles back down smoothly. The movement should feel musical and emotionally connected to the vocal line. She should never look stiff, but also never overperform or dance too much. Her hip motion remains graceful and continuous throughout the shot, giving a subtle sensual groove without becoming flashy.\n\n  The microphone remains on its stand for the whole shot.\n\n  <Subject 4> performs realistically behind her: the drummer plays a steady four-on-the-floor pulse with precise stick movement and consistent groove, while the bassist plays a driving line with believable finger motion and a subtle head nod in time with the music.\n\n  <Subject 2> remains mostly steady and immersed in the performance, with a few spectators filming on smartphones, small natural body movements, and occasional gentle crowd sway.\n\n  The camera holds a stable medium shot from the audience perspective and performs a very slow, smooth push-in toward Runa over the full shot. The framing should feel intimate, controlled, and immersive, with Runa remaining the clear focal point.\n\noverall_soundscape:\n  Live alley atmosphere, crowd presence, and close-miked band energy.\n\nnon_diegetic_music:\n  Use the supplied master song. Keep the visible live performance synchronized with the supplied musical timeline.",
+        "prompt": "",
         "width": 960,
         "height": 544,
         "length": 362,
@@ -14983,7 +14997,8 @@
           "input_ue_unconnectable": {}
         }
       },
-      "widgets_values": [        "9:16 (Portrait Widescreen)",
+      "widgets_values": [
+        "9:16 (Portrait Widescreen)",
         1,
         32
       ],
@@ -15982,7 +15997,8 @@
       "LATENT"
     ],
     [
-      1102,      3,
+      1102,
+      3,
       0,
       2291,
       1,
@@ -16981,7 +16997,8 @@
       "LATENT"
     ],
     [
-      1318,      4,
+      1318,
+      4,
       0,
       1601,
       1,
@@ -17980,7 +17997,8 @@
       "INT"
     ],
     [
-      1399,      3,
+      1399,
+      3,
       0,
       2500,
       0,
@@ -18979,7 +18997,8 @@
       "INT"
     ],
     [
-      996,      100,
+      996,
+      100,
       1,
       2000,
       10,
@@ -19978,7 +19997,8 @@
     {
       "id": 26,
       "title": "CLIP 9 — controller managed",
-      "bounding": [        580,
+      "bounding": [
+        580,
         6420,
         2700,
         760
