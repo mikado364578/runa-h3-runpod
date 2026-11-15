@@ -1,7 +1,10 @@
 # RUNA H3 — experimental CUDA 13.0 build. Keep stable CUDA 12.8 on main.
-# Floating base tag: record resolved image digest when benchmarking.
+# Pinned upstream CUDA 13.0 image; experimental, not the stable main image.
 # Revalidate custom nodes and startup compatibility with newer RunPod image.
-FROM runpod/comfyui:cuda13.0
+FROM runpod/comfyui:2.2.1-rc.237-comfyuiv0.44.0-cuda13.0
+
+# Fail the build immediately if the selected base is not running PyTorch CUDA 13.
+RUN python3 -c "import torch; print('Build PyTorch:', torch.__version__, 'CUDA:', torch.version.cuda); assert torch.version.cuda is not None and torch.version.cuda.startswith('13.'), 'Expected PyTorch CUDA 13.x'"
 
 USER root
 
