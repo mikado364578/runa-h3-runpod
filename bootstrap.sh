@@ -93,4 +93,14 @@ echo "  Jupyter     port 8888 (authentication enabled unless explicitly disabled
 echo "  ComfyUI     port 8188 (starting now)"
 echo "  FileBrowser port 8080 (starting now)"
 echo "============================================================"
+# Ensure ComfyUI can be accessed behind the RunPod HTTP proxy.
+# The CUDA 13 base image does not include this flag by default.
+ARGS_FILE=/workspace/runpod-slim/comfyui_args.txt
+mkdir -p "$(dirname "$ARGS_FILE")"
+touch "$ARGS_FILE"
+if ! grep -Eq '(^|[[:space:]])--enable-cors-header([[:space:]]|$)' "$ARGS_FILE"; then
+  printf '%s\n' '--enable-cors-header' >> "$ARGS_FILE"
+fi
+echo "[RUNA H3] ComfyUI proxy access flag configured."
+
 exec "$START_SCRIPT"
