@@ -23,15 +23,11 @@ RUN set -eux; \
     git clone -q https://github.com/nicolab28/ComfyUI-ClipProj.git "$base/comfyui-clipproj"; \
     python3 -m pip install --no-cache-dir cryptography opencv-python imageio-ffmpeg
 
-# Store the sanitized workflow in ComfyUI's saved-workflow directory.
-# It contains no RUNA prompts or personal input filenames.
-COPY RUNA_H3.workflow.json.gz.b64 /opt/runa-h3/workflow.json.gz.b64
+# Install only the validated CUDA 13 RUNA continuity workflow.
+# Existing workflows from the base image are removed from the baked installation.
 RUN mkdir -p /opt/comfyui-baked/user/default/workflows \
-    && base64 -d /opt/runa-h3/workflow.json.gz.b64 | gzip -dc > /opt/comfyui-baked/user/default/workflows/RUNA_H3.json
-
-# Add both updated ComfyUI workflows without replacing the original RUNA_H3.json.
-COPY Runa_H3_New.json /opt/comfyui-baked/user/default/workflows/Runa_H3_New.json
-COPY ["NEW - Music Video.json", "/opt/comfyui-baked/user/default/workflows/NEW - Music Video.json"]
+    && find /opt/comfyui-baked/user/default/workflows -maxdepth 1 -type f -name '*.json' -delete
+COPY RUNA_H3_Cuda13.json /opt/comfyui-baked/user/default/workflows/RUNA_H3_Cuda13.json
 
 COPY bootstrap.sh model_downloads.py /opt/runa-h3/
 RUN chmod 755 /opt/runa-h3/bootstrap.sh
