@@ -6,7 +6,7 @@ Automated MiniMax H3 setup for RUNA lip-sync music videos.
 
 - Extends Runpod ComfyUI 0.35.0 / CUDA 12.8.
 - Bakes five custom-node packages into the image (no GPU time spent cloning them).
-- Downloads seven model files (about 37 GB) to the temporary Pod disk with three parallel workers, up to three attempts per file and a concise status summary.
+- Downloads ten model files (including both FL2VA and REF2VA diffusion models; additional disk space required) to the temporary Pod disk with three parallel workers, up to three attempts per file and a concise status summary.
 - Opens authenticated JupyterLab on port 8888 during downloads. When all models are ready, the early Jupyter process stops briefly and Runpod's original `/start.sh` restarts JupyterLab and launches ComfyUI, SSH and FileBrowser. If no `JUPYTER_PASSWORD` is supplied, a secure per-Pod token is generated automatically.
 - Includes a sanitized RUNA_H3.json workflow (no personal prompts or input files); does **not** include RUNA portraits, audio, personal LoRAs, or credentials.
 
@@ -36,6 +36,6 @@ Do **not** reset, stop or restart a temporary Pod before saving outputs: the con
 
 ## Known testing boundary
 
-The extension versions and seven model filenames are based on the working source Pod. This container has **not yet been validated** with a full RUNA workflow. Before production use, confirm ComfyUI's startup logs have no failed node imports, upload your own reference images and audio, and run a short one-clip test. The custom extensions are third-party code and should be reviewed before running.
+The extension versions and model filenames are based on the working source Pod. This container has **not yet been validated** with a full RUNA workflow. Before production use, confirm ComfyUI's startup logs have no failed node imports, upload your own reference images and audio, and run a short one-clip test. The custom extensions are third-party code and should be reviewed before running.
 
 The initial GitHub Actions build incurs no Runpod GPU charges, but GitHub Actions and container-registry policies/quotas still apply.
