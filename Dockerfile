@@ -1,5 +1,7 @@
-# RUNA H3 — reproducible extensions, CUDA 12.8, models downloaded at Pod boot.
-FROM runpod/comfyui:1.4.0-comfyuiv0.35.0-cuda12.8
+# RUNA H3 — experimental CUDA 13.0 build. Keep stable CUDA 12.8 on main.
+# Floating base tag: record resolved image digest when benchmarking.
+# Revalidate custom nodes and startup compatibility with newer RunPod image.
+FROM runpod/comfyui:cuda13.0
 
 USER root
 
