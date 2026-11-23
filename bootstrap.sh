@@ -88,7 +88,7 @@ fi
 echo "============================================================"
 echo "  RUNA H3 — model download summary"
 echo "  Models      10/10 verified"
-echo "  Workflow    $COMFY_DIR/user/default/workflows/RUNA_H3.json"
+echo "  Workflows   RUNA_H3_Cuda13.json + NEW - Music Video.json"
 echo "  Jupyter     port 8888 (authentication enabled unless explicitly disabled)"
 echo "  ComfyUI     port 8188 (starting now)"
 echo "  FileBrowser port 8080 (starting now)"
