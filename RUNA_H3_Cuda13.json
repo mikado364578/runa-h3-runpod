@@ -2,7 +2,7 @@
   "id": "3c8789a4-f2e8-419a-96a5-773bd84d8a63",
   "revision": 1,
   "last_node_id": 2515,
-  "last_link_id": 1500,
+  "last_link_id": 1502,
   "nodes": [
     {
       "id": 5,
@@ -132,7 +132,7 @@
       ],
       "flags": {},
       "order": 118,
-      "mode": 0,
+      "mode": 4,
       "inputs": [
         {
           "name": "latent",
@@ -294,7 +294,7 @@
       ],
       "flags": {},
       "order": 120,
-      "mode": 0,
+      "mode": 4,
       "inputs": [
         {
           "name": "noise",
@@ -3469,7 +3469,9 @@
             997,
             1027,
             1057,
-            1426
+            1426,
+            1501,
+            1502
           ]
         },
         {
@@ -4341,7 +4343,7 @@
       ],
       "flags": {},
       "order": 74,
-      "mode": 0,
+      "mode": 4,
       "inputs": [
         {
           "name": "values.a",
@@ -4674,7 +4676,7 @@
           ]
         }
       ],
-      "title": "CLIP 7 - MIDNIGHT GLASS CITY - SONG-PACED MOTION / IRREGULAR CUTS",
+      "title": "Clip 7",
       "properties": {
         "cnr_id": "comfy-core",
         "ver": "0.30.0",
@@ -4693,7 +4695,7 @@
         "",
         960,
         544,
-        362,
+        192,
         "match"
       ],
       "widgets_values_named": {
@@ -4838,7 +4840,7 @@
           ]
         }
       ],
-      "title": "CLIP 8 - INFINITE MIRROR ATELIER - SONG-PACED MOTION / IRREGULAR CUTS",
+      "title": "Clip 8",
       "properties": {
         "cnr_id": "comfy-core",
         "ver": "0.30.0",
@@ -4857,7 +4859,7 @@
         "",
         960,
         544,
-        362,
+        192,
         "match"
       ],
       "widgets_values_named": {
@@ -5002,7 +5004,7 @@
           ]
         }
       ],
-      "title": "CLIP 9 - ART-DECO NIGHT TRAIN - SONG-PACED MOTION / IRREGULAR CUTS",
+      "title": "Clip 9",
       "properties": {
         "cnr_id": "comfy-core",
         "ver": "0.30.0",
@@ -5021,7 +5023,7 @@
         "",
         960,
         544,
-        362,
+        192,
         "match"
       ],
       "widgets_values_named": {
@@ -5166,7 +5168,7 @@
           ]
         }
       ],
-      "title": "CLIP 10 - MIDNIGHT GLASS CITY - SONG-PACED MOTION / IRREGULAR CUTS",
+      "title": "Clip 10",
       "properties": {
         "cnr_id": "comfy-core",
         "ver": "0.30.0",
@@ -5185,7 +5187,7 @@
         "",
         960,
         544,
-        362,
+        192,
         "match"
       ],
       "widgets_values_named": {
@@ -5330,7 +5332,7 @@
           ]
         }
       ],
-      "title": "CLIP 11 - INFINITE MIRROR ATELIER - SONG-PACED MOTION / IRREGULAR CUTS",
+      "title": "Clip 11",
       "properties": {
         "cnr_id": "comfy-core",
         "ver": "0.30.0",
@@ -5349,7 +5351,7 @@
         "",
         960,
         544,
-        362,
+        192,
         "match"
       ],
       "widgets_values_named": {
@@ -5494,7 +5496,7 @@
           ]
         }
       ],
-      "title": "CLIP 12 - ART-DECO NIGHT TRAIN - SONG-PACED MOTION / IRREGULAR CUTS",
+      "title": "Clip 12",
       "properties": {
         "cnr_id": "comfy-core",
         "ver": "0.30.0",
@@ -5513,7 +5515,7 @@
         "",
         960,
         544,
-        362,
+        192,
         "match"
       ],
       "widgets_values_named": {
@@ -5658,7 +5660,7 @@
           ]
         }
       ],
-      "title": "CLIP 13 - MIDNIGHT GLASS CITY - SONG-PACED MOTION / IRREGULAR CUTS",
+      "title": "Clip 13",
       "properties": {
         "cnr_id": "comfy-core",
         "ver": "0.30.0",
@@ -5677,7 +5679,7 @@
         "",
         960,
         544,
-        362,
+        192,
         "match"
       ],
       "widgets_values_named": {
@@ -5779,6 +5781,14 @@
           "link": 490
         },
         {
+          "name": "length",
+          "type": "INT",
+          "link": 1502,
+          "widget": {
+            "name": "length"
+          }
+        },
+        {
           "name": "ref_images.ref_image_3",
           "shape": 7,
           "type": "IMAGE",
@@ -5814,7 +5824,7 @@
           ]
         }
       ],
-      "title": "CLIP 14 - FINAL SONG TAIL - INFINITE MIRROR ATELIER - CONTROLLED CLOSE-UP",
+      "title": "Clip 14",
       "properties": {
         "cnr_id": "comfy-core",
         "ver": "0.30.0",
@@ -5833,7 +5843,7 @@
         "",
         960,
         544,
-        90,
+        192,
         "match"
       ],
       "widgets_values_named": {
@@ -5978,7 +5988,7 @@
           ]
         }
       ],
-      "title": "CLIP 15 - ART-DECO NIGHT TRAIN - 4 MOVING SHOTS / IRREGULAR CUTS",
+      "title": "Clip 15",
       "properties": {
         "cnr_id": "comfy-core",
         "ver": "0.30.0",
@@ -5997,7 +6007,7 @@
         "",
         960,
         544,
-        362,
+        192,
         "match"
       ],
       "widgets_values_named": {
@@ -6357,7 +6367,7 @@
           ]
         }
       ],
-      "title": "CLIP 16 - MIDNIGHT GLASS CITY - 4 MOVING SHOTS / IRREGULAR CUTS",
+      "title": "Clip 16",
       "properties": {
         "cnr_id": "comfy-core",
         "ver": "0.30.0",
@@ -6376,7 +6386,7 @@
         "",
         960,
         544,
-        362,
+        192,
         "match"
       ],
       "widgets_values_named": {
@@ -6858,7 +6868,7 @@
           ]
         }
       ],
-      "title": "CLIP 17 - INFINITE MIRROR ATELIER - 4 MOVING SHOTS / IRREGULAR CUTS",
+      "title": "Clip 17",
       "properties": {
         "cnr_id": "comfy-core",
         "ver": "0.30.0",
@@ -6877,7 +6887,7 @@
         "",
         960,
         544,
-        362,
+        192,
         "match"
       ],
       "widgets_values_named": {
@@ -7359,7 +7369,7 @@
           ]
         }
       ],
-      "title": "CLIP 18 - ART-DECO NIGHT TRAIN - 4 MOVING SHOTS / IRREGULAR CUTS",
+      "title": "Clip 18",
       "properties": {
         "cnr_id": "comfy-core",
         "ver": "0.30.0",
@@ -7378,7 +7388,7 @@
         "",
         960,
         544,
-        362,
+        192,
         "match"
       ],
       "widgets_values_named": {
@@ -7860,7 +7870,7 @@
           ]
         }
       ],
-      "title": "CLIP 19 - MIDNIGHT GLASS CITY - 4 MOVING SHOTS / IRREGULAR CUTS",
+      "title": "Clip 19",
       "properties": {
         "cnr_id": "comfy-core",
         "ver": "0.30.0",
@@ -7879,7 +7889,7 @@
         "",
         960,
         544,
-        362,
+        192,
         "match"
       ],
       "widgets_values_named": {
@@ -8361,7 +8371,7 @@
           ]
         }
       ],
-      "title": "CLIP 20 - INFINITE MIRROR ATELIER - 4 MOVING SHOTS / IRREGULAR CUTS",
+      "title": "Clip 20",
       "properties": {
         "cnr_id": "comfy-core",
         "ver": "0.30.0",
@@ -8380,7 +8390,7 @@
         "",
         960,
         544,
-        362,
+        192,
         "match"
       ],
       "widgets_values_named": {
@@ -8891,12 +8901,7 @@
         "save_metadata": false,
         "trim_to_audio": true,
         "pingpong": false,
-        "save_output": false,
-        "videopreview": {
-          "hidden": false,
-          "paused": false,
-          "params": {}
-        }
+        "save_output": false
       },
       "widgets_values_named": {
         "frame_rate": 24,
@@ -9031,12 +9036,7 @@
         "save_metadata": false,
         "trim_to_audio": true,
         "pingpong": false,
-        "save_output": false,
-        "videopreview": {
-          "hidden": false,
-          "paused": false,
-          "params": {}
-        }
+        "save_output": false
       },
       "widgets_values_named": {
         "frame_rate": 24,
@@ -9171,12 +9171,7 @@
         "save_metadata": false,
         "trim_to_audio": true,
         "pingpong": false,
-        "save_output": false,
-        "videopreview": {
-          "hidden": false,
-          "paused": false,
-          "params": {}
-        }
+        "save_output": false
       },
       "widgets_values_named": {
         "frame_rate": 24,
@@ -9311,12 +9306,7 @@
         "save_metadata": false,
         "trim_to_audio": true,
         "pingpong": false,
-        "save_output": false,
-        "videopreview": {
-          "hidden": false,
-          "paused": false,
-          "params": {}
-        }
+        "save_output": false
       },
       "widgets_values_named": {
         "frame_rate": 24,
@@ -9451,12 +9441,7 @@
         "save_metadata": false,
         "trim_to_audio": true,
         "pingpong": false,
-        "save_output": false,
-        "videopreview": {
-          "hidden": false,
-          "paused": false,
-          "params": {}
-        }
+        "save_output": false
       },
       "widgets_values_named": {
         "frame_rate": 24,
@@ -9591,12 +9576,7 @@
         "save_metadata": false,
         "trim_to_audio": true,
         "pingpong": false,
-        "save_output": false,
-        "videopreview": {
-          "hidden": false,
-          "paused": false,
-          "params": {}
-        }
+        "save_output": false
       },
       "widgets_values_named": {
         "frame_rate": 24,
@@ -9731,12 +9711,7 @@
         "save_metadata": false,
         "trim_to_audio": true,
         "pingpong": false,
-        "save_output": false,
-        "videopreview": {
-          "hidden": false,
-          "paused": false,
-          "params": {}
-        }
+        "save_output": false
       },
       "widgets_values_named": {
         "frame_rate": 24,
@@ -9871,12 +9846,7 @@
         "save_metadata": false,
         "trim_to_audio": true,
         "pingpong": false,
-        "save_output": false,
-        "videopreview": {
-          "hidden": false,
-          "paused": false,
-          "params": {}
-        }
+        "save_output": false
       },
       "widgets_values_named": {
         "frame_rate": 24,
@@ -10011,12 +9981,7 @@
         "save_metadata": false,
         "trim_to_audio": true,
         "pingpong": false,
-        "save_output": false,
-        "videopreview": {
-          "hidden": false,
-          "paused": false,
-          "params": {}
-        }
+        "save_output": false
       },
       "widgets_values_named": {
         "frame_rate": 24,
@@ -10151,12 +10116,7 @@
         "save_metadata": false,
         "trim_to_audio": true,
         "pingpong": false,
-        "save_output": false,
-        "videopreview": {
-          "hidden": false,
-          "paused": false,
-          "params": {}
-        }
+        "save_output": false
       },
       "widgets_values_named": {
         "frame_rate": 24,
@@ -10291,12 +10251,7 @@
         "save_metadata": false,
         "trim_to_audio": true,
         "pingpong": false,
-        "save_output": false,
-        "videopreview": {
-          "hidden": false,
-          "paused": false,
-          "params": {}
-        }
+        "save_output": false
       },
       "widgets_values_named": {
         "frame_rate": 24,
@@ -10431,12 +10386,7 @@
         "save_metadata": false,
         "trim_to_audio": true,
         "pingpong": false,
-        "save_output": false,
-        "videopreview": {
-          "hidden": false,
-          "paused": false,
-          "params": {}
-        }
+        "save_output": false
       },
       "widgets_values_named": {
         "frame_rate": 24,
@@ -10571,12 +10521,7 @@
         "save_metadata": false,
         "trim_to_audio": true,
         "pingpong": false,
-        "save_output": false,
-        "videopreview": {
-          "hidden": false,
-          "paused": false,
-          "params": {}
-        }
+        "save_output": false
       },
       "widgets_values_named": {
         "frame_rate": 24,
@@ -10711,20 +10656,7 @@
         "save_metadata": false,
         "trim_to_audio": true,
         "pingpong": false,
-        "save_output": false,
-        "videopreview": {
-          "hidden": false,
-          "paused": false,
-          "params": {
-            "filename": "music_clip_15_00001-audio.mp4",
-            "subfolder": "h3_preview",
-            "type": "temp",
-            "format": "video/h264-mp4",
-            "frame_rate": 24,
-            "workflow": "music_clip_15_00001.png",
-            "fullpath": "C:\\Users\\Admin\\Documents\\ComfyUI\\ComfyUI-Easy-Install\\ComfyUI\\temp\\h3_preview\\music_clip_15_00001-audio.mp4"
-          }
-        }
+        "save_output": false
       },
       "widgets_values_named": {
         "frame_rate": 24,
@@ -10867,12 +10799,7 @@
         "save_metadata": false,
         "trim_to_audio": true,
         "pingpong": false,
-        "save_output": false,
-        "videopreview": {
-          "hidden": false,
-          "paused": false,
-          "params": {}
-        }
+        "save_output": false
       },
       "widgets_values_named": {
         "frame_rate": 24,
@@ -11007,12 +10934,7 @@
         "save_metadata": false,
         "trim_to_audio": true,
         "pingpong": false,
-        "save_output": false,
-        "videopreview": {
-          "hidden": false,
-          "paused": false,
-          "params": {}
-        }
+        "save_output": false
       },
       "widgets_values_named": {
         "frame_rate": 24,
@@ -11147,12 +11069,7 @@
         "save_metadata": false,
         "trim_to_audio": true,
         "pingpong": false,
-        "save_output": false,
-        "videopreview": {
-          "hidden": false,
-          "paused": false,
-          "params": {}
-        }
+        "save_output": false
       },
       "widgets_values_named": {
         "frame_rate": 24,
@@ -11287,12 +11204,7 @@
         "save_metadata": false,
         "trim_to_audio": true,
         "pingpong": false,
-        "save_output": false,
-        "videopreview": {
-          "hidden": false,
-          "paused": false,
-          "params": {}
-        }
+        "save_output": false
       },
       "widgets_values_named": {
         "frame_rate": 24,
@@ -11427,12 +11339,7 @@
         "save_metadata": false,
         "trim_to_audio": true,
         "pingpong": false,
-        "save_output": false,
-        "videopreview": {
-          "hidden": false,
-          "paused": false,
-          "params": {}
-        }
+        "save_output": false
       },
       "widgets_values_named": {
         "frame_rate": 24,
@@ -12181,20 +12088,7 @@
         "save_metadata": false,
         "trim_to_audio": true,
         "pingpong": false,
-        "save_output": false,
-        "videopreview": {
-          "hidden": false,
-          "paused": false,
-          "params": {
-            "filename": "music_clip_01_00001-audio.mp4",
-            "subfolder": "h3_preview",
-            "type": "temp",
-            "format": "video/h264-mp4",
-            "frame_rate": 24,
-            "workflow": "music_clip_01_00001.png",
-            "fullpath": "C:\\Users\\Admin\\Documents\\ComfyUI\\ComfyUI-Easy-Install\\ComfyUI\\temp\\h3_preview\\music_clip_01_00001-audio.mp4"
-          }
-        }
+        "save_output": false
       },
       "widgets_values_named": {
         "frame_rate": 24,
@@ -12248,7 +12142,7 @@
         }
       },
       "widgets_values": [
-        "TRUE INDEPENDENT-CUT VERSION\\n\\nNo clip inherits a previous latent. Video context and assembly trim are both zero. Clips 1-13 use the full 345-frame H3 length; the final active Clip 14 uses 311 H3-valid frames to match the remaining song duration. Only about 0.03 seconds extends beyond the master song. The untouched original song remains the final audio track."
+        "CLEAN WORKFLOW — 20 CLIPS\nOnly Clip 1 is enabled at startup. Clips 2–20 and standalone previews are bypassed.\nThe length inputs of all 20 R2V nodes use the shared H3-compatible frame calculator, including Clips 6 and 14.\nGlobal target: 8 seconds per clip, 24 fps, 1 MP, portrait 9:16.\nExisting 39-frame context and final assembly settings are preserved. Check continuity/audio alignment on a short run before enabling the entire sequence."
       ],
       "widgets_values_named": {
         "text": "TRUE INDEPENDENT-CUT VERSION\\n\\nNo clip inherits a previous latent. Video context and assembly trim are both zero. Clips 1-13 use the full 345-frame H3 length; the final active Clip 14 uses 311 H3-valid frames to match the remaining song duration. Only about 0.03 seconds extends beyond the master song. The untouched original song remains the final audio track."
@@ -12328,7 +12222,7 @@
         }
       },
       "widgets_values": [
-        "START HERE — AUTOMATIC SONG LENGTH\n\nThis copy reads the selected MASTER SONG duration and sets ACTIVE CLIPS automatically.\n\n1. Choose one or two reference images of the same character.\n2. Choose the master song.\n3. Leave auto_from_song enabled for a complete-song render. The controller label shows the detected duration and calculated clip count.\n4. For a short test, disable auto_from_song and set ACTIVE CLIPS manually (usually 1).\n5. PREVIEWS changes only the optional per-clip previews; it does not change the final assembled video.\n\nAt the current 15-second clip duration and 39 context frames, this 3:19.8 song resolves to 15 active clips. Songs requiring more than the workflow's 20-clip capacity are visibly capped and logged as a warning.\n\nEach clip has its own prompt so scenes can change, but the prompts do not have to be different. Reusing one prompt produces a continuous-performance treatment; changing them lets the music video progress through different shots."
+        "RUNA H3 CUDA13 — CLEAN STARTER (20 clips)\n1. Load reference image(s) and the master song.\n2. Enter the new prompt in Clip 1.\n3. Initial test: Clip 1 active, Clips 2–20 bypassed, 1 MP / 9:16.\n4. To run more clips, enable the corresponding chain and increase the active-clips count in both the Controller and Final stream node.\n5. Global clip duration is 8 seconds, converted to an H3-compatible frame count. Verify the final song boundaries when making a full video.\n6. The 39-frame context is configured for later clips; changing context or trimming affects joins. Save before modifying."
       ],
       "widgets_values_named": {
         "text": "START HERE — AUTOMATIC SONG LENGTH\n\nThis copy reads the selected MASTER SONG duration and sets ACTIVE CLIPS automatically.\n\n1. Choose one or two reference images of the same character.\n2. Choose the master song.\n3. Leave auto_from_song enabled for a complete-song render. The controller label shows the detected duration and calculated clip count.\n4. For a short test, disable auto_from_song and set ACTIVE CLIPS manually (usually 1).\n5. PREVIEWS changes only the optional per-clip previews; it does not change the final assembled video.\n\nAt the current 15-second clip duration and 39 context frames, this 3:19.8 song resolves to 15 active clips. Songs requiring more than the workflow's 20-clip capacity are visibly capped and logged as a warning.\n\nEach clip has its own prompt so scenes can change, but the prompts do not have to be different. Reusing one prompt produces a continuous-performance treatment; changing them lets the music video progress through different shots."
@@ -12650,7 +12544,7 @@
         }
       },
       "widgets_values": [
-        10,
+        1,
         39,
         0,
         "video/H3_LipSync_MusicVideo_IndependentCuts",
@@ -13767,7 +13661,7 @@
       ],
       "flags": {},
       "order": 51,
-      "mode": 0,
+      "mode": 4,
       "inputs": [
         {
           "name": "clip",
@@ -13886,7 +13780,7 @@
           ]
         }
       ],
-      "title": "CLIP 2 - INFINITE MIRROR ATELIER - SONG-PACED MOTION / IRREGULAR CUTS",
+      "title": "Clip 2",
       "properties": {
         "cnr_id": "comfy-core",
         "ver": "0.30.0",
@@ -13905,7 +13799,7 @@
         "",
         960,
         544,
-        362,
+        192,
         "match"
       ],
       "widgets_values_named": {
@@ -14050,7 +13944,7 @@
           ]
         }
       ],
-      "title": "CLIP 3 - ART-DECO NIGHT TRAIN - SONG-PACED MOTION / IRREGULAR CUTS",
+      "title": "Clip 3",
       "properties": {
         "cnr_id": "comfy-core",
         "ver": "0.30.0",
@@ -14069,7 +13963,7 @@
         "",
         960,
         544,
-        362,
+        192,
         "match"
       ],
       "widgets_values_named": {
@@ -14282,7 +14176,7 @@
           ]
         }
       ],
-      "title": "CLIP 4 - MIDNIGHT GLASS CITY - SONG-PACED MOTION / IRREGULAR CUTS",
+      "title": "Clip 4",
       "properties": {
         "cnr_id": "comfy-core",
         "ver": "0.30.0",
@@ -14301,7 +14195,7 @@
         "",
         960,
         544,
-        362,
+        192,
         "match"
       ],
       "widgets_values_named": {
@@ -14446,7 +14340,7 @@
           ]
         }
       ],
-      "title": "CLIP 5 - INFINITE MIRROR ATELIER - SONG-PACED MOTION / IRREGULAR CUTS",
+      "title": "Clip 5",
       "properties": {
         "cnr_id": "comfy-core",
         "ver": "0.30.0",
@@ -14465,7 +14359,7 @@
         "",
         960,
         544,
-        362,
+        192,
         "match"
       ],
       "widgets_values_named": {
@@ -14567,6 +14461,14 @@
           "link": 151
         },
         {
+          "name": "length",
+          "type": "INT",
+          "link": 1501,
+          "widget": {
+            "name": "length"
+          }
+        },
+        {
           "name": "ref_images.ref_image_3",
           "shape": 7,
           "type": "IMAGE",
@@ -14602,7 +14504,7 @@
           ]
         }
       ],
-      "title": "CLIP 6 - ART-DECO NIGHT TRAIN - SONG-PACED MOTION / IRREGULAR CUTS",
+      "title": "Clip 6",
       "properties": {
         "cnr_id": "comfy-core",
         "ver": "0.30.0",
@@ -14621,7 +14523,7 @@
         "",
         960,
         544,
-        141,
+        192,
         "match"
       ],
       "widgets_values_named": {
@@ -14743,7 +14645,7 @@
         }
       },
       "widgets_values": [
-        2,
+        1,
         "Off"
       ],
       "widgets_values_named": {
@@ -14885,7 +14787,7 @@
           ]
         }
       ],
-      "title": "CLIP 1 - MIDNIGHT GLASS CITY - SONG-PACED MOTION / IRREGULAR CUTS",
+      "title": "Clip 1",
       "properties": {
         "cnr_id": "comfy-core",
         "ver": "0.30.0",
@@ -14904,7 +14806,7 @@
         "",
         960,
         544,
-        362,
+        192,
         "match"
       ],
       "widgets_values_named": {
@@ -18697,7 +18599,7 @@
       2506,
       0,
       1600,
-      11,
+      12,
       "IMAGE"
     ],
     [
@@ -19569,7 +19471,7 @@
       2506,
       0,
       600,
-      11,
+      12,
       "IMAGE"
     ],
     [
@@ -19651,6 +19553,22 @@
       110,
       12,
       "IMAGE"
+    ],
+    [
+      1501,
+      102,
+      1,
+      600,
+      11,
+      "INT"
+    ],
+    [
+      1502,
+      102,
+      1,
+      1600,
+      11,
+      "INT"
     ]
   ],
   "groups": [
@@ -19692,7 +19610,7 @@
     },
     {
       "id": 10,
-      "title": "CLIP 1 — controller managed",
+      "title": "Clip 1",
       "bounding": [
         580,
         -940,
@@ -19711,7 +19629,7 @@
     },
     {
       "id": 11,
-      "title": "CLIP 1 PREVIEW — controller managed",
+      "title": "Clip 1 — Preview",
       "bounding": [
         3340,
         -800,
@@ -19730,7 +19648,7 @@
     },
     {
       "id": 12,
-      "title": "CLIP 2 — controller managed",
+      "title": "Clip 2",
       "bounding": [
         580,
         -20,
@@ -19749,7 +19667,7 @@
     },
     {
       "id": 13,
-      "title": "CLIP 2 PREVIEW — controller managed",
+      "title": "Clip 2 — Preview",
       "bounding": [
         3340,
         120,
@@ -19768,7 +19686,7 @@
     },
     {
       "id": 14,
-      "title": "CLIP 3 — controller managed",
+      "title": "Clip 3",
       "bounding": [
         580,
         900,
@@ -19787,7 +19705,7 @@
     },
     {
       "id": 15,
-      "title": "CLIP 3 PREVIEW — controller managed",
+      "title": "Clip 3 — Preview",
       "bounding": [
         3340,
         1040,
@@ -19806,7 +19724,7 @@
     },
     {
       "id": 16,
-      "title": "CLIP 4 — controller managed",
+      "title": "Clip 4",
       "bounding": [
         580,
         1820,
@@ -19825,7 +19743,7 @@
     },
     {
       "id": 17,
-      "title": "CLIP 4 PREVIEW — controller managed",
+      "title": "Clip 4 — Preview",
       "bounding": [
         3340,
         1960,
@@ -19844,7 +19762,7 @@
     },
     {
       "id": 18,
-      "title": "CLIP 5 — controller managed",
+      "title": "Clip 5",
       "bounding": [
         580,
         2740,
@@ -19863,7 +19781,7 @@
     },
     {
       "id": 19,
-      "title": "CLIP 5 PREVIEW — controller managed",
+      "title": "Clip 5 — Preview",
       "bounding": [
         3340,
         2880,
@@ -19882,7 +19800,7 @@
     },
     {
       "id": 20,
-      "title": "CLIP 6 — controller managed",
+      "title": "Clip 6",
       "bounding": [
         580,
         3660,
@@ -19901,7 +19819,7 @@
     },
     {
       "id": 21,
-      "title": "CLIP 6 PREVIEW — controller managed",
+      "title": "Clip 6 — Preview",
       "bounding": [
         3340,
         3800,
@@ -19920,7 +19838,7 @@
     },
     {
       "id": 22,
-      "title": "CLIP 7 — controller managed",
+      "title": "Clip 7",
       "bounding": [
         580,
         4580,
@@ -19939,7 +19857,7 @@
     },
     {
       "id": 23,
-      "title": "CLIP 7 PREVIEW — controller managed",
+      "title": "Clip 7 — Preview",
       "bounding": [
         3340,
         4720,
@@ -19958,7 +19876,7 @@
     },
     {
       "id": 24,
-      "title": "CLIP 8 — controller managed",
+      "title": "Clip 8",
       "bounding": [
         580,
         5500,
@@ -19977,7 +19895,7 @@
     },
     {
       "id": 25,
-      "title": "CLIP 8 PREVIEW — controller managed",
+      "title": "Clip 8 — Preview",
       "bounding": [
         3340,
         5640,
@@ -19996,7 +19914,7 @@
     },
     {
       "id": 26,
-      "title": "CLIP 9 — controller managed",
+      "title": "Clip 9",
       "bounding": [
         580,
         6420,
@@ -20015,7 +19933,7 @@
     },
     {
       "id": 27,
-      "title": "CLIP 9 PREVIEW — controller managed",
+      "title": "Clip 9 — Preview",
       "bounding": [
         3340,
         6560,
@@ -20034,7 +19952,7 @@
     },
     {
       "id": 28,
-      "title": "CLIP 10 — controller managed",
+      "title": "Clip 10",
       "bounding": [
         580,
         7340,
@@ -20053,7 +19971,7 @@
     },
     {
       "id": 29,
-      "title": "CLIP 10 PREVIEW — controller managed",
+      "title": "Clip 10 — Preview",
       "bounding": [
         3340,
         7480,
@@ -20072,7 +19990,7 @@
     },
     {
       "id": 30,
-      "title": "CLIP 11 — controller managed",
+      "title": "Clip 11",
       "bounding": [
         580,
         8260,
@@ -20091,7 +20009,7 @@
     },
     {
       "id": 31,
-      "title": "CLIP 11 PREVIEW — controller managed",
+      "title": "Clip 11 — Preview",
       "bounding": [
         3340,
         8400,
@@ -20110,7 +20028,7 @@
     },
     {
       "id": 32,
-      "title": "CLIP 12 — controller managed",
+      "title": "Clip 12",
       "bounding": [
         580,
         9180,
@@ -20129,7 +20047,7 @@
     },
     {
       "id": 33,
-      "title": "CLIP 12 PREVIEW — controller managed",
+      "title": "Clip 12 — Preview",
       "bounding": [
         3340,
         9320,
@@ -20148,7 +20066,7 @@
     },
     {
       "id": 34,
-      "title": "CLIP 13 — controller managed",
+      "title": "Clip 13",
       "bounding": [
         580,
         10100,
@@ -20167,7 +20085,7 @@
     },
     {
       "id": 35,
-      "title": "CLIP 13 PREVIEW — controller managed",
+      "title": "Clip 13 — Preview",
       "bounding": [
         3340,
         10240,
@@ -20186,7 +20104,7 @@
     },
     {
       "id": 36,
-      "title": "CLIP 14 — controller managed",
+      "title": "Clip 14",
       "bounding": [
         580,
         11020,
@@ -20205,7 +20123,7 @@
     },
     {
       "id": 37,
-      "title": "CLIP 14 PREVIEW — controller managed",
+      "title": "Clip 14 — Preview",
       "bounding": [
         3340,
         11160,
@@ -20224,7 +20142,7 @@
     },
     {
       "id": 38,
-      "title": "CLIP 15 — controller managed",
+      "title": "Clip 15",
       "bounding": [
         580,
         11940,
@@ -20243,7 +20161,7 @@
     },
     {
       "id": 39,
-      "title": "CLIP 15 PREVIEW — controller managed",
+      "title": "Clip 15 — Preview",
       "bounding": [
         3340,
         12080,
@@ -20262,7 +20180,7 @@
     },
     {
       "id": 40,
-      "title": "CLIP 16 — controller managed",
+      "title": "Clip 16",
       "bounding": [
         580,
         12860,
@@ -20281,7 +20199,7 @@
     },
     {
       "id": 41,
-      "title": "CLIP 16 PREVIEW — controller managed",
+      "title": "Clip 16 — Preview",
       "bounding": [
         3340,
         13000,
@@ -20300,7 +20218,7 @@
     },
     {
       "id": 42,
-      "title": "CLIP 17 — controller managed",
+      "title": "Clip 17",
       "bounding": [
         580,
         13780,
@@ -20319,7 +20237,7 @@
     },
     {
       "id": 43,
-      "title": "CLIP 17 PREVIEW — controller managed",
+      "title": "Clip 17 — Preview",
       "bounding": [
         3340,
         13920,
@@ -20338,7 +20256,7 @@
     },
     {
       "id": 44,
-      "title": "CLIP 18 — controller managed",
+      "title": "Clip 18",
       "bounding": [
         580,
         14700,
@@ -20357,7 +20275,7 @@
     },
     {
       "id": 45,
-      "title": "CLIP 18 PREVIEW — controller managed",
+      "title": "Clip 18 — Preview",
       "bounding": [
         3340,
         14840,
@@ -20376,7 +20294,7 @@
     },
     {
       "id": 46,
-      "title": "CLIP 19 — controller managed",
+      "title": "Clip 19",
       "bounding": [
         580,
         15620,
@@ -20395,7 +20313,7 @@
     },
     {
       "id": 47,
-      "title": "CLIP 19 PREVIEW — controller managed",
+      "title": "Clip 19 — Preview",
       "bounding": [
         3340,
         15760,
@@ -20414,7 +20332,7 @@
     },
     {
       "id": 48,
-      "title": "CLIP 20 — controller managed",
+      "title": "Clip 20",
       "bounding": [
         580,
         16540,
@@ -20433,7 +20351,7 @@
     },
     {
       "id": 49,
-      "title": "CLIP 20 PREVIEW — controller managed",
+      "title": "Clip 20 — Preview",
       "bounding": [
         3340,
         16680,
