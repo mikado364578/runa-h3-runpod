@@ -9663,7 +9663,7 @@
       ],
       "flags": {},
       "order": 116,
-      "mode": 0,
+      "mode": 4,
       "inputs": [
         {
           "name": "images",
@@ -9785,7 +9785,7 @@
       ],
       "flags": {},
       "order": 120,
-      "mode": 0,
+      "mode": 4,
       "inputs": [
         {
           "name": "images",
@@ -9907,7 +9907,7 @@
       ],
       "flags": {},
       "order": 124,
-      "mode": 0,
+      "mode": 4,
       "inputs": [
         {
           "name": "images",
@@ -10029,7 +10029,7 @@
       ],
       "flags": {},
       "order": 128,
-      "mode": 0,
+      "mode": 4,
       "inputs": [
         {
           "name": "images",
@@ -10151,7 +10151,7 @@
       ],
       "flags": {},
       "order": 132,
-      "mode": 0,
+      "mode": 4,
       "inputs": [
         {
           "name": "images",
@@ -10273,7 +10273,7 @@
       ],
       "flags": {},
       "order": 136,
-      "mode": 0,
+      "mode": 4,
       "inputs": [
         {
           "name": "images",
@@ -12902,7 +12902,7 @@
       },
       "widgets_values": [
         6,
-        "All Active"
+        "Off"
       ],
       "widgets_values_named": {
         "active_clips": 6,
@@ -13168,7 +13168,7 @@
       ],
       "flags": {},
       "order": 67,
-      "mode": 0,
+      "mode": 4,
       "inputs": [
         {
           "name": "source",
