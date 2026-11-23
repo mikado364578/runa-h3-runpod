@@ -43,7 +43,9 @@ The initial GitHub Actions build incurs no Runpod GPU charges, but GitHub Action
 ## CUDA 13 experimental variant (`test-cuda13` branch)
 
 - Docker image: `ghcr.io/mikado364578/runa-h3-runpod:cuda13-test-v2`.
-- This image installs only `RUNA_H3_Cuda13.json` into the new Pod's ComfyUI saved-workflows directory.
+- The CUDA 13 image installs two saved workflows for side-by-side testing: `RUNA_H3_Cuda13.json` (clean 20-clip RUNA starter, 1 MP, only Clip 1 enabled) and `NEW - Music Video.json` (the previously versioned official-style music-video test workflow).
+- Both workflow source files are versioned in GitHub; the second workflow is available in the source tree but was not previously copied into the baked ComfyUI workflows directory.
+- The saved test workflow may reference demo image/audio filenames that must be replaced with files uploaded to the Pod; the corresponding encoder, diffusion, VAE and LoRA model filenames are included in `model_downloads.py`.
 - The validated output node uses 39 context frames and 0 extra overlap frames to preserve the two-clip continuity and audio alignment.
 - Previous workflow source files remain in GitHub for historical recovery, but are not copied into this image.
 - SageAttention is not installed or enabled in this Docker image; tests on a running Pod may differ.
