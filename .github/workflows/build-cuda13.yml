@@ -9,6 +9,7 @@ on:
       - model_downloads.py
       - RUNA_H3_Cuda13.json
       - 'NEW - Music Video.json'
+      - H3_ComfyUI_Official_Ref2V.json
       - .github/workflows/build-cuda13.yml
   workflow_dispatch:
 
