@@ -23,13 +23,14 @@ RUN set -eux; \
     git clone -q https://github.com/nicolab28/ComfyUI-ClipProj.git "$base/comfyui-clipproj"; \
     python3 -m pip install --no-cache-dir cryptography opencv-python imageio-ffmpeg
 
-# Install all three CUDA 13 workflows for side-by-side testing.
+# Install all four CUDA 13 workflows for side-by-side testing.
 # Existing workflows from the base image are removed from the baked installation.
 RUN mkdir -p /opt/comfyui-baked/user/default/workflows \
     && find /opt/comfyui-baked/user/default/workflows -maxdepth 1 -type f -name '*.json' -delete
 COPY RUNA_H3_Cuda13.json /opt/comfyui-baked/user/default/workflows/RUNA_H3_Cuda13.json
 COPY ["NEW - Music Video.json", "/opt/comfyui-baked/user/default/workflows/NEW - Music Video.json"]
 COPY H3_ComfyUI_Official_Ref2V.json /opt/comfyui-baked/user/default/workflows/H3_ComfyUI_Official_Ref2V.json
+COPY RUNA_PRISM_Beta57_Shift12-3.json /opt/comfyui-baked/user/default/workflows/RUNA_PRISM_Beta57_Shift12-3.json
 
 COPY bootstrap.sh model_downloads.py /opt/runa-h3/
 RUN chmod 755 /opt/runa-h3/bootstrap.sh
