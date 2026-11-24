@@ -10,6 +10,7 @@ on:
       - RUNA_H3_Cuda13.json
       - 'NEW - Music Video.json'
       - H3_ComfyUI_Official_Ref2V.json
+      - RUNA_PRISM_Beta57_Shift12-3.json
       - .github/workflows/build-cuda13.yml
   workflow_dispatch:
 
