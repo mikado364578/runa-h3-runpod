@@ -65,7 +65,7 @@ nohup jupyter lab --allow-root --no-browser --port=8888 --ip=0.0.0.0 \
 EARLY_JUPYTER_PID=$!
 echo "[RUNA H3] Early Jupyter process launched (PID $EARLY_JUPYTER_PID)."
 
-echo "[RUNA H3] Installing/checking ten model files..."
+echo "[RUNA H3] Installing/checking twelve model files..."
 python3 /opt/runa-h3/model_downloads.py
 
 # Do not leave the early instance running when official /start.sh starts.
@@ -87,8 +87,10 @@ fi
 
 echo "============================================================"
 echo "  RUNA H3 — model download summary"
-echo "  Models      10/10 verified"
-echo "  Workflows   RUNA_H3_Cuda13.json + NEW - Music Video.json"
+echo "  Models      12/12 verified"
+echo "  Workflows   RUNA_H3_Cuda13.json"
+echo "              NEW - Music Video.json"
+echo "              H3_ComfyUI_Official_Ref2V.json"
 echo "  Jupyter     port 8888 (authentication enabled unless explicitly disabled)"
 echo "  ComfyUI     port 8188 (starting now)"
 echo "  FileBrowser port 8080 (starting now)"
