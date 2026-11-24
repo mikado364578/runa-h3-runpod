@@ -43,10 +43,17 @@ The initial GitHub Actions build incurs no Runpod GPU charges, but GitHub Action
 ## CUDA 13 experimental variant (`test-cuda13` branch)
 
 - Docker image: `ghcr.io/mikado364578/runa-h3-runpod:cuda13-test-v2`.
-- The CUDA 13 image installs three saved workflows for side-by-side testing: `RUNA_H3_Cuda13.json` (clean 20-clip RUNA starter, 1 MP, only Clip 1 enabled), `NEW - Music Video.json` (20-clip music-video test workflow), and `H3_ComfyUI_Official_Ref2V.json` (single-clip ComfyUI reference-to-video workflow supplied by the user and cleared of old prompt/image filenames).
-- All three workflow source files are versioned in GitHub and copied into ComfyUI's baked user/default/workflows folder.
+- The CUDA 13 image installs four saved workflows for side-by-side testing: `RUNA_H3_Cuda13.json` (clean 20-clip RUNA starter, 1 MP, only Clip 1 enabled), `NEW - Music Video.json` (20-clip music-video test workflow), and `H3_ComfyUI_Official_Ref2V.json` (single-clip ComfyUI reference-to-video workflow supplied by the user and cleared of old prompt/image filenames), and `RUNA_PRISM_Beta57_Shift12-3.json` (experimental Singularity PRISM-DMAD-PDMD reference-to-video test, 8 steps, Euler/Beta scheduler, video/audio shifts 12/3, blank prompt and image inputs).
+- All four workflow source files are versioned in GitHub and copied into ComfyUI's baked user/default/workflows folder.
 - The official Ref2V workflow starts with an empty prompt and empty reference-image filenames; supply your own inputs. Its additional Qwen3-VL 32B NVFP4 encoder and 4-step Turbo LoRA increase download/storage needs by approximately 16.5 GB. The official workflow defaults to 20-step non-Turbo sampling; enable the Turbo toggle to test 4 steps.
 - The validated output node uses 39 context frames and 0 extra overlap frames to preserve the two-clip continuity and audio alignment.
 - Previous workflow source files remain in GitHub for historical recovery, but are not copied into this image.
 - SageAttention is not installed or enabled in this Docker image; tests on a running Pod may differ.
 - As before, user-specific images and audio need to be provided separately to run the workflow.
+
+### PRISM fourth-workflow test
+
+- Model: `PRISM_DMAD_PDMD_int8.safetensors` (roughly 20.3 GB) from `OliviaRossi/Minimax-h3_Singularity-x-10Eros-Max_PRISM` on Hugging Face. The automatic download is the thirteenth model job and places it in `models/diffusion_models/`.
+- The PRISM test workflow uses existing Qwen3-VL 32B NVFP4, H3 INT8 video VAE and audio VAE. Turbo LoRA is disabled by default.
+- A larger Pod disk is recommended: with 13 model files including the additional 20.3 GB PRISM weight file, 100 GB may be insufficient; consider at least 150 GB of container disk for a fresh test, subject to actual occupied space.
+- This workflow has **not been GPU-validated**; its BetaSamplingScheduler (0.5/0.7), Euler sampler and 12/3 H3 shifts must be tested in the installed ComfyUI environment.
