@@ -19,6 +19,8 @@ JOBS = [
     ("ClipProj", "NicoLab28/ClipProj-MiniMax-H3", "mmh3-4b-ClipProj-v3.1.safetensors", ROOT / "clip_projections"),
     ("Official Qwen3-VL 32B", "Comfy-Org/MiniMax-H3", "text_encoders/qwen3vl_32b_minimax_h3_int8_convrot.safetensors", ROOT),
     ("Official H3 video VAE INT8", "Kijai/MiniMax-H3-experimental", "minimax_h3_video_vae_int8_convrot.safetensors", ROOT / "vae"),
+    ("Official ComfyUI Qwen3-VL 32B NVFP4", "Comfy-Org/MiniMax-H3", "qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors", ROOT / "text_encoders"),
+    ("Official ComfyUI Ref2V Turbo 4-step", "Comfy-Org/MiniMax-H3", "minimax_h3_ref2v_turbo_4step_v0.1_comfyui_bf16.safetensors", ROOT / "loras"),
 ]
 MAX_WORKERS = 3
 ATTEMPTS = 3
