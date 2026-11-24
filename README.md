@@ -43,9 +43,9 @@ The initial GitHub Actions build incurs no Runpod GPU charges, but GitHub Action
 ## CUDA 13 experimental variant (`test-cuda13` branch)
 
 - Docker image: `ghcr.io/mikado364578/runa-h3-runpod:cuda13-test-v2`.
-- The CUDA 13 image installs two saved workflows for side-by-side testing: `RUNA_H3_Cuda13.json` (clean 20-clip RUNA starter, 1 MP, only Clip 1 enabled) and `NEW - Music Video.json` (the previously versioned official-style music-video test workflow).
-- Both workflow source files are versioned in GitHub; the second workflow is available in the source tree but was not previously copied into the baked ComfyUI workflows directory.
-- The saved test workflow may reference demo image/audio filenames that must be replaced with files uploaded to the Pod; the corresponding encoder, diffusion, VAE and LoRA model filenames are included in `model_downloads.py`.
+- The CUDA 13 image installs three saved workflows for side-by-side testing: `RUNA_H3_Cuda13.json` (clean 20-clip RUNA starter, 1 MP, only Clip 1 enabled), `NEW - Music Video.json` (20-clip music-video test workflow), and `H3_ComfyUI_Official_Ref2V.json` (single-clip ComfyUI reference-to-video workflow supplied by the user and cleared of old prompt/image filenames).
+- All three workflow source files are versioned in GitHub and copied into ComfyUI's baked user/default/workflows folder.
+- The official Ref2V workflow starts with an empty prompt and empty reference-image filenames; supply your own inputs. Its additional Qwen3-VL 32B NVFP4 encoder and 4-step Turbo LoRA increase download/storage needs by approximately 16.5 GB. The official workflow defaults to 20-step non-Turbo sampling; enable the Turbo toggle to test 4 steps.
 - The validated output node uses 39 context frames and 0 extra overlap frames to preserve the two-clip continuity and audio alignment.
 - Previous workflow source files remain in GitHub for historical recovery, but are not copied into this image.
 - SageAttention is not installed or enabled in this Docker image; tests on a running Pod may differ.
