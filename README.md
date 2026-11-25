@@ -53,7 +53,13 @@ The initial GitHub Actions build incurs no Runpod GPU charges, but GitHub Action
 
 ### PRISM fourth-workflow test
 
-- Model: `PRISM_DMAD_PDMD_int8.safetensors` (roughly 20.3 GB) from `OliviaRossi/Minimax-h3_Singularity-x-10Eros-Max_PRISM` on Hugging Face. The automatic download is the thirteenth model job and places it in `models/diffusion_models/`.
+- Model: `PRISM_DMAD_PDMD_int8.safetensors` (roughly 20.3 GB) from `OliviaRossi/Minimax-h3_Singularity-x-10Eros-Max_PRISM` on Hugging Face. This optional model is **not downloaded automatically** and does not block startup. The CUDA 13 image downloads 12 other model files automatically. To use the PRISM workflow, run the following in a Pod terminal:
+
+  ```bash
+  hf download OliviaRossi/Minimax-h3_Singularity-x-10Eros-Max_PRISM PRISM_DMAD_PDMD_int8.safetensors --local-dir /workspace/runpod-slim/ComfyUI/models/diffusion_models
+  ```
+
+  Refresh ComfyUI's model list after the download completes.
 - The PRISM test workflow uses existing Qwen3-VL 32B NVFP4, H3 INT8 video VAE and audio VAE. Turbo LoRA is disabled by default.
-- A larger Pod disk is recommended: with 13 model files including the additional 20.3 GB PRISM weight file, 100 GB may be insufficient; consider at least 150 GB of container disk for a fresh test, subject to actual occupied space.
+- A larger Pod disk is recommended: with 12 automatic model files plus the optional 20.3 GB PRISM weight file, 100 GB may be insufficient; consider at least 150 GB of container disk for a fresh test, subject to actual occupied space.
 - This workflow has **not been GPU-validated**; its BetaSamplingScheduler (0.5/0.7), Euler sampler and 12/3 H3 shifts must be tested in the installed ComfyUI environment.

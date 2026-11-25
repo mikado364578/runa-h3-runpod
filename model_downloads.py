@@ -21,7 +21,6 @@ JOBS = [
     ("Official H3 video VAE INT8", "Kijai/MiniMax-H3-experimental", "minimax_h3_video_vae_int8_convrot.safetensors", ROOT / "vae"),
     ("Official ComfyUI Qwen3-VL 32B NVFP4", "Comfy-Org/MiniMax-H3", "text_encoders/qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors", ROOT),
     ("Official ComfyUI Ref2V Turbo 4-step", "Comfy-Org/MiniMax-H3", "loras/minimax_h3_ref2v_turbo_4step_v0.1_comfyui_bf16.safetensors", ROOT),
-    ("Singularity PRISM DMAD PDMD INT8", "OliviaRossi/Minimax-h3_Singularity-x-10Eros-Max_PRISM", "PRISM_DMAD_PDMD_int8.safetensors", ROOT / "diffusion_models"),
 ]
 MAX_WORKERS = 3
 ATTEMPTS = 3
